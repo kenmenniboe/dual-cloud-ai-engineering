@@ -541,7 +541,7 @@ Use spot/preemptible instances wherever possible. Tear down non-essential resour
 ## What You Can Skip or Defer
 
 - **AZ-305** can slide to Month 15 if architecture domains feel weak — do not rush it
-- **AWS ML Specialty** can be deferred to Month 13 if ML work in Months 4–5 feels shallow
+- **AWS ML Engineer Associate** can be deferred to Month 13 if ML work in Months 4–5 feels shallow
 - **SageMaker Pipelines** depth can be reduced if you're not targeting MLOps-specific roles
 - **Multi-region** builds in Month 10 can be architecture-only (no actual deploy) to save cost
 
