@@ -39,6 +39,7 @@ To make Git start tracking changes, I created the first project structure.
 ### Commands Used
 
 mkdir -p docs diagrams scripts/python scripts/bash
+
 touch README.md
 
 Then I added the docs files: 
@@ -46,6 +47,7 @@ Then I added the docs files:
 touch docs/linux-notes.md docs/networking-notes.md docs/tls-explained.md docs/nginx-notes.md docs/python-basics.md docs/azure-notes.md docs/aws-notes.md
 
 And the diagrams:
+
 touch diagrams/week1-network-flow.png diagrams/nginx-architecture.png diagrams/azure-architecture.png diagrams/aws-architecture.png diagrams/final-architecture.png
 
 And the scripts:
@@ -70,13 +72,19 @@ I set up a clean multi‑branch workflow.
 ### Commands Used
 
 #### Create branches
+
 git branch -M main
+
 git branch test
+
 git branch prod
 
 #### Switch between branches
+
 git switch main
+
 git switch test
+
 git switch prod
 
 ### Screenshot Placeholder
@@ -91,14 +99,19 @@ To push my work, I connected my local repo to GitHub.
 ### Steps I Followed
 
 1. Opened GitHub → clicked **Code** → copied HTTPS URL  
+
 2. Added the remote:
+
 git remote add origin <your-repo-url>
 
 3. Verified the connection:
+
 git remote -v
 
 ### Expected Output
+
 origin  https://github.com/<username>/<repo>.git (fetch)
+
 origin  https://github.com/<username>/<repo>.git (push)
 
 ### Screenshot Placeholder
@@ -133,13 +146,19 @@ To keep all branches synced, I merged `main` into the others.
 ### Commands Used
 
 #### Merge into test
+
 git switch test
+
 git merge main
+
 git push
 
 #### Merge into prod
+
 git switch prod
+
 git merge main
+
 git push
 
 ### Screenshot Placeholder
