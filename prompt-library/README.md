@@ -603,39 +603,6 @@ Tone: Friendly, clear, and concise. Treat me like a capable adult building from 
 
 ---
 
-## 📁 Suggested Repo Structure
 
-```
-prompt-library/
-├── README.md                        ← This file
-├── learning/
-│   ├── study-mode-python.md
-│   ├── study-mode-az104.md
-│   └── study-mode-aws-demo.md
-├── documentation/
-│   └── daily-github-doc-builder.md
-├── planning/
-│   ├── monthly-roadmap-planner.md
-│   └── 30-day-skill-sprint.md
-├── certifications/
-│   ├── study-plan-generator.md
-│   ├── practice-quiz.md
-│   └── podcast-episode-generator.md
-├── decisions/
-│   ├── clarify-first.md
-│   ├── 4-axis-decision.md
-│   └── devils-advocate.md
-├── analysis/
-│   ├── error-audit.md
-│   ├── document-analyzer.md
-│   ├── literature-review.md
-│   └── contradiction-detector.md
-└── personas/
-    ├── expert-roleplay.md
-    ├── product-manager.md
-    └── scientific-researcher.md
-```
-
----
 
 *Last updated: June 2026 | Maintained by Kenneth Menniboe*
