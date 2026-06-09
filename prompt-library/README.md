@@ -49,7 +49,7 @@ Rules:
 - For each module: explain the concept, give a real-world cloud/tech example, then quiz me
 - Ask 3-5 quiz questions ONE AT A TIME and wait for my answer before revealing it
 - Only move to the next module after I demonstrate understanding
-- After fundamentals, I'll ask you to advance to intermediate, then advanced
+- After tutoring me the fundamentals and  intermediate of this topic, then prompt to advanced the advance level
 
 Start with Module 1 now.
 ```
