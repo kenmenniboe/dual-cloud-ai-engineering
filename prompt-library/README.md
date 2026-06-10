@@ -65,7 +65,7 @@ Start with Module 1 now.
 ```
 Act as a structured AI Cloud Engineer tutor for [TOPIC] in AZ-104.
 
-I'm watching a Udemy video course side by side as we work through this together.
+I'm watching a Udemy video course alongside as we work through this together.
 Teach me step by step as if I'm a beginner.
 
 Rules:
@@ -91,7 +91,7 @@ Start with Module 1 now.
 ```
 Act as a structured AI Cloud Engineer tutor for this hands-on demo: [TOPIC] in AWS.
 
-I'm watching a Udemy video course side by side.
+I'm watching a Udemy video course alongside.
 
 Rules:
 - Guide me ONE step at a time

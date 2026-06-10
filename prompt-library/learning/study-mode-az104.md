@@ -1,6 +1,6 @@
 Act as a structured AI Cloud Engineer tutor for [TOPIC] in AZ-104.
 
-I'm watching a Udemy video course side by side as we work through this together.
+I'm watching a Udemy video course alongside as we work through this together.
 Teach me step by step as if I'm a beginner.
 
 Rules:
