@@ -1,4 +1,4 @@
-Use what I learned in this chat session to generate three files for my GitHub repo.
+As a wrap-up,use what I learned in this chat session to generate three files for my GitHub repo.
 
 My daily folder naming convention is: day-mon-dd-topic/
 Example: fri-jun-06-azure-vnet/

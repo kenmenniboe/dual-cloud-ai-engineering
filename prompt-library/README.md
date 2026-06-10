@@ -112,7 +112,7 @@ Start with Step 1 now.
 **Use when:** End of a study session — generating clean GitHub files from what you learned.
 
 ```
-Use what I learned in this chat session to generate three files for my GitHub repo.
+As a wrap-up, use what I learned in this chat session to generate three files for my GitHub repo.
 
 My daily folder naming convention is: day-mon-dd-topic/
 Example: fri-jun-06-azure-vnet/
