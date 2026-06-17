@@ -19,7 +19,7 @@ commands.md (if any CLI commands were used)
 - Every command from the session, clean and copy-paste ready
 - Group by tool or workflow stage
 
-When it is all done, I will need you to create the folder and all three empty files in one shot:
+When it is all done, I will need a one-line command that creates the folder and all three empty files in one shot:
 Example: mkdir -p day-mon-dd-topic && touch day-mon-dd-topic/{README.md,notes.md,commands.md}
 
 Base the content on everything we covered in this conversation.
