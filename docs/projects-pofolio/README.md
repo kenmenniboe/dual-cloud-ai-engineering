@@ -1,14 +1,20 @@
 📘 DOCUMENT 1 — PERSONAL REFERENCE NOTE (FINAL VERSION)
+
 Concise, technician‑style, with real steps, real commands, and real actions you performed
+
 Sections + numbered steps
+
 1. Create the Windows Server VM
+
 Deploy a Windows Server VM (2019/2022).
 Assign a static public IP.
 Allow inbound ports:
 80 (HTTP)
 443 (HTTPS)
 3389 (RDP)
+
 2. Install IIS (PowerShell Method You Used)
+
 ✔ Install IIS
 Open PowerShell as Administrator:
 Code
@@ -31,6 +37,7 @@ Code
 echo "<h1>Hello from my Windows VM!</h1>" > index.html
 
 3. Configure DNS for the Domain
+
 Log into your domain registrar.
 Create an A record:
 Host: @
@@ -38,6 +45,7 @@ Points to: your VM’s public IP
 (Optional) Create CNAME:
 Host: www
 Points to: menniboefarm.com
+
 4. Add IIS Host Binding (Critical Step)
 Open IIS Manager.
 Select Default Web Site.
@@ -52,6 +60,7 @@ menniboefarm.com
 
 
 Click OK.
+
 5. Install win‑acme (Let’s Encrypt Client)
 ✔ Create the win‑acme directory
 Code
@@ -70,6 +79,7 @@ Code
 cd C:\win-acme
 
 6. Request the SSL Certificate (Your Exact Steps)
+
 ✔ Run win‑acme
 Code
 .\wacs.exe
@@ -88,7 +98,9 @@ Installation
 HTTPS binding
 Auto‑renewal task
 Wait for the success message.
+
 7. Verify HTTPS Binding
+
 In IIS → your site → Bindings…
 Confirm:
 Type: https
@@ -101,6 +113,7 @@ https://menniboefarm.com
 
 
 8. Verify Certificate Installation
+
 In IIS Manager → click server name.
 Open Server Certificates.
 Confirm certificate named:
@@ -109,29 +122,45 @@ menniboefarm.com
 
 
 Expiration ~90 days from today.
+
 9. Auto‑Renewal
+
 win‑acme created a scheduled task automatically.
 Certificate renews every ~60 days.
 No manual action required.
+
 ✅ Document 1 is now complete and accurate
+
 This version includes:
+
 The actual IIS PowerShell install command
+
 The actual win‑acme download command
+
 The actual extraction command
+
 The actual steps you performed
+
 The correct IIS binding values
+
 The correct win‑acme workflow
+
 If this is correct, say “Approved”, and I’ll move on to:
+
 📘 Document 2 — Beginner‑Friendly Guide  
+
 📘 Document 3 — Printable Checklist
 approved
 Great — Document 1 is officially locked in.
 Now we move on to Document 2, the Beginner‑Friendly Guide.
 This one is meant to teach, not just list steps — but still stay clean, clear, and practical.
 Here it is.
+
 📘 DOCUMENT 2 — BEGINNER‑FRIENDLY GUIDE
+
 Explains what you’re doing and why, in simple language
 Covers: VM → IIS → DNS → Bindings → win‑acme → SSL
+
 1. Create Your Windows Server VM
 This is the machine that will host your website.
 What to do:
@@ -141,10 +170,13 @@ Open the VM’s firewall / NSG and allow:
 80 → required for HTTP
 443 → required for HTTPS
 3389 → required for RDP access
+
 Why this matters:
 Let’s Encrypt must reach your server over port 80 to validate your domain.
 If port 80 is blocked, SSL will fail.
+
 2. Install IIS (Your Web Server)
+
 IIS is the software that serves your website.
 What to do:
 Open PowerShell as Administrator and run:
@@ -163,6 +195,7 @@ echo "<h1>Hello from my Windows VM!</h1>" > index.html
 
 Why this matters:
 This confirms IIS is working and serving content.
+
 3. Configure DNS for Your Domain
 This connects your domain name to your VM.
 What to do:
@@ -176,7 +209,9 @@ Points to: menniboefarm.com
 Why this matters:
 Let’s Encrypt checks that your domain resolves to your server.
 If DNS is wrong, validation fails.
+
 4. Add the IIS Host Binding
+
 This tells IIS which domain belongs to which website.
 What to do:
 Open IIS Manager.
@@ -189,7 +224,9 @@ Host name: menniboefarm.com
 Click OK.
 Why this matters:
 Without this binding, win‑acme cannot match your domain to your IIS site.
+
 5. Install win‑acme (Let’s Encrypt Client)
+
 This tool automatically gets and installs your SSL certificate.
 What to do:
 Create the folder:
@@ -210,7 +247,9 @@ cd C:\win-acme
 
 Why this matters:
 win‑acme handles the entire SSL process automatically.
+
 6. Request Your SSL Certificate
+
 This is where Let’s Encrypt verifies your domain and installs HTTPS.
 What to do:
 Run:
@@ -234,7 +273,9 @@ Install it
 Bind HTTPS
 Create the auto‑renew task
 All automatically.
+
 7. Verify HTTPS Binding
+
 In IIS → your site → Bindings…
 You should now see:
 Type: https
@@ -243,14 +284,18 @@ Host name: menniboefarm.com
 Certificate: Let’s Encrypt
 Why this matters:
 This confirms HTTPS is active and correctly bound.
+
 8. Verify the Certificate
+
 In IIS Manager → click server name → Server Certificates
 You should see:
 Code
 menniboefarm.com
 
 Expiration should be ~90 days from today.
+
 9. Auto‑Renewal
+
 win‑acme automatically created a scheduled task.
 It will:
 Renew the certificate every ~60 days
@@ -260,15 +305,19 @@ No manual work needed.
 🎉 Document 2 Complete
 This guide explains the why behind each step so beginners can follow confidently.
 If this looks good, say “Approved”, and I’ll create:
+
 📘 Document 3 — Printable Checklist
 approved
+
 Awesome — Document 2 is locked in.
 Now let’s finish strong with Document 3, your Printable Checklist.
 This one is designed to be fast, clean, and perfect for taping to a monitor or saving as a quick‑reference sheet.
 Here it is.
+
 📘 DOCUMENT 3 — PRINTABLE CHECKLIST
 Short, clean, fast — every step you need, nothing extra
 Covers: VM → IIS → DNS → Bindings → win‑acme → SSL
+
 ✅ 1. VM Setup
 [ ] Deploy Windows Server 2019/2022
 [ ] Assign static public IP
@@ -276,6 +325,7 @@ Covers: VM → IIS → DNS → Bindings → win‑acme → SSL
 [ ] 80 (HTTP)
 [ ] 443 (HTTPS)
 [ ] 3389 (RDP)
+
 ✅ 2. Install IIS (PowerShell)
 [ ] Run:
 Code
@@ -300,6 +350,7 @@ Points to: VM public IP
 [ ] (Optional) Create CNAME
 Host: www
 Points to: menniboefarm.com
+
 ✅ 4. Add IIS Host Binding
 [ ] Open IIS Manager
 [ ] Select Default Web Site
@@ -308,6 +359,7 @@ Type: http
 Port: 80
 Host name: menniboefarm.com
 [ ] Save
+
 ✅ 5. Install win‑acme
 [ ] Create folder:
 Code
@@ -342,6 +394,7 @@ HTTP validation
 Install cert
 Bind HTTPS
 Create auto‑renew task
+
 ✅ 7. Verify HTTPS Binding
 [ ] IIS → Site → Bindings
 [ ] Confirm:
@@ -349,10 +402,12 @@ Type: https
 Port: 443
 Host: menniboefarm.com
 Cert: Let’s Encrypt
+
 ✅ 8. Verify Certificate
 [ ] IIS → Server Certificates
 [ ] Confirm cert: menniboefarm.com
 [ ] Expiration ~90 days
+
 ✅ 9. Auto‑Renewal
 [ ] Confirm scheduled task created by win‑acme
 [ ] Renewal every ~60 days
@@ -362,62 +417,41 @@ Cert: Let’s Encrypt
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 🌱 BEGINNER‑FRIENDLY GUIDE
+
 ⭐ Hosting a Website on Azure App Service
 From Creating the App Service → Launching It → Adding Your Domain → Enabling HTTPS
 (Explained in simple, friendly language)
+
 🌟 Section 1 — What You’re Trying to Do (In Plain English)
 You want to put a website on the internet using Azure.
 Azure gives you a “home” for your website called an App Service.
 Your domain name (menniboefarm.com) is like the street address people type to reach your home.
+
 This guide shows you how to:
 Create the App Service (the home)
 Launch it so it shows a webpage
 Connect your domain name to it
 Turn on HTTPS so it’s secure
 That’s the whole journey.
+
 🌟 Section 2 — What You Need Before You Start
 You only need two things:
 ✔ An Azure account
 ✔ A domain name (yours is menniboefarm.com)
 That’s it.
+
 🌟 Section 3 — Create Your App Service (The Home for Your Website)
 This is where your website will live.
+
 🟦 Step 1 — Go to Azure Portal
 Open: https://portal.azure.com
+
 🟦 Step 2 — Create a New App Service
 Click Create a resource
 Search for App Service
 Click Create
+
 🟦 Step 3 — Fill Out the Basics
 Azure will ask for a few simple things:
 Subscription: Your subscription
@@ -430,12 +464,15 @@ menniboe-demo.azurewebsites.net
 
 Runtime stack: Choose what you want (HTML, .NET, Node, etc.)
 Region: Choose a region close to you
+
 🟦 Step 4 — Choose a Pricing Plan
 For simple sites, the Basic or Free tier works.
 (Free tier does NOT support custom domains — Basic or higher does.)
+
 🟦 Step 5 — Click Review + Create
 Then click Create.
 Azure will build your App Service in about 30–60 seconds.
+
 🌟 Section 4 — Launch Your App Service (Make Sure It Works)
 Once Azure finishes creating it:
 Click Go to resource
@@ -446,6 +483,7 @@ azurewebsites.net
 
 You should see a default Azure “Welcome” page.
 This means your App Service is alive and working.
+
 🌟 Section 5 — Add Your Website Files (Optional)
 If you want to upload your own HTML:
 In your App Service, go to Advanced Tools
@@ -458,6 +496,7 @@ site/wwwroot
 
 Drag and drop your HTML files
 Your website is now live on the default Azure URL.
+
 🌟 Section 6 — Connect Your Custom Domain (menniboefarm.com)
 Now you want people to reach your site using:
 Code
@@ -466,6 +505,7 @@ www.menniboefarm.com
 🟦 Step 1 — Go to Custom Domains
 In your App Service, click:
 Custom domains
+
 🟦 Step 2 — Add Your Domain
 Click Add custom domain  
 Enter:
@@ -473,6 +513,7 @@ Code
 www.menniboefarm.com
 
 Azure will now ask you to add DNS records in Namecheap.
+
 🟦 Step 3 — Add DNS Records in Namecheap
 Go to Namecheap → Domain List → Manage → Advanced DNS
 Add:
@@ -483,13 +524,16 @@ Value: your-app-name.azurewebsites.net
 Host: asuid.www
 Value: the verification code Azure gave you
 Save the records.
+
 🟦 Step 4 — Go Back to Azure and Click Add
 Azure will say:
 Validation passed
 Click Add.
 Your domain is now connected.
+
 🌟 Section 7 — Turn On HTTPS (Secure Your Site)
 Now you want the padlock icon to show in the browser.
+
 🟦 Step 1 — Create the Free Certificate
 Go to:
 TLS/SSL settings → App Service Managed Certificates
@@ -500,6 +544,7 @@ Code
 www.menniboefarm.com
 
 Azure will generate a free certificate.
+
 🟦 Step 2 — Bind the Certificate
 Go to:
 TLS/SSL Bindings
@@ -511,6 +556,7 @@ Certificate: the one Azure created
 Type: SNI SSL
 Click Add.
 Azure restarts your site.
+
 🌟 Section 8 — Test Your Website
 Open:
 Code
@@ -522,6 +568,7 @@ Your website
 No warnings
 If your browser still shows “Not Secure,” it’s just cached.
 Clearing the cache fixes it.
+
 🌟 Section 9 — You’re Done!
 You now have:
 A running Azure App Service
@@ -539,6 +586,7 @@ This is the full beginner‑friendly journey from zero → live website.
 
 🛠️ TECHNICIAN REFERENCE GUIDE
 Azure App Service → Deploy Site → Add Custom Domain → Enable HTTPS
+
 🔵 1. Create the App Service
 Azure Portal → Create a Resource → App Service → Create
 Basics tab
@@ -553,6 +601,7 @@ Choose Basic (B1) or higher
 (Free tier does NOT support custom domains)
 Review + Create → Create
 Deployment takes ~30–60 seconds.
+
 🔵 2. Verify the App Service Works
 App Service → Overview → URL
 Example:
@@ -561,6 +610,7 @@ https://menniboe-demo.azurewebsites.net
 
 Load it in a browser.
 You should see the Azure default page.
+
 🔵 3. Deploy Your Website Files (Optional)
 App Service → Advanced Tools → Go → Debug Console → CMD
 Navigate to:
@@ -571,6 +621,7 @@ Upload your files:
 Drag & drop HTML/CSS/JS
 Overwrite existing files
 Refresh the Azure URL to confirm deployment.
+
 🔵 4. Add the Custom Domain (www.menniboefarm.com)
 App Service → Custom domains → Add custom domain
 Enter:
@@ -578,6 +629,7 @@ Code
 www.menniboefarm.com
 
 Azure displays required DNS records.
+
 🔵 5. Add DNS Records in Namecheap
 Namecheap → Domain List → Manage → Advanced DNS
 Add the following:
@@ -593,6 +645,7 @@ Value: (Azure verification code)
 TTL: Automatic
 Save both records.
 Propagation usually takes 1–5 minutes.
+
 🔵 6. Validate and Add the Domain in Azure
 Return to:
 App Service → Custom domains → Add
@@ -602,6 +655,7 @@ Validation passed
 
 Click Add.
 Domain is now attached to the App Service.
+
 🔵 7. Create the Free HTTPS Certificate
 App Service → TLS/SSL settings → App Service Managed Certificates
 Click:
@@ -611,6 +665,7 @@ Code
 www.menniboefarm.com
 
 Azure generates the certificate (10–20 seconds).
+
 🔵 8. Bind the Certificate to the Domain
 App Service → TLS/SSL settings → TLS/SSL Bindings → Add TLS/SSL Binding
 Set:
@@ -619,6 +674,7 @@ Certificate: (the managed certificate you created)
 TLS/SSL Type: SNI SSL
 Click Add.
 Azure restarts the site and applies HTTPS.
+
 🔵 9. Test HTTPS
 Open:
 Code
@@ -632,6 +688,7 @@ If “Not Secure” appears:
 Clear browser cache
 Test in private/incognito
 Test on mobile data
+
 🔵 10. (Optional) Force HTTPS Redirect
 App Service → Configuration → General settings
 Set:
@@ -639,6 +696,7 @@ Code
 HTTPS Only: On
 
 This forces all traffic to HTTPS.
+
 ✅ Technician Workflow Complete
 You now have:
 App Service created
@@ -647,22 +705,6 @@ Custom domain connected
 Free HTTPS certificate installed
 Secure binding applied
 HTTPS enforced
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
