@@ -5,8 +5,8 @@
 Running `scp` **on the Ubuntu server** (inside an SSH session) breaks the destination path. `~` expands to the *server's* home directory (`/root`), not your Mac's, so the local destination path becomes invalid.
 
 ```
-root@localhost:~# scp root@97.107.130.14:/var/www/menniboefarm.com/html/index.html ~/Users/kennethmenniboe/Desktop
-scp: open local "/root/Users/kennethmenniboe/Desktop": No such file or directory
+root@localhost:~# scp root@97.107.130.14:/var/www/example.com/html/index.html ~/Example/example-user/Desktop
+scp: open local "/root/Example/example-user/Desktop": No such file or directory
 ```
 
 ## The Fix
@@ -14,13 +14,13 @@ scp: open local "/root/Users/kennethmenniboe/Desktop": No such file or directory
 Run `scp` **from your Mac's terminal**, not from inside the SSH session on the server.
 
 ```bash
-scp root@97.107.130.14:/var/www/menniboefarm.com/html/index.html /Users/kennethmenniboe/Desktop/
+scp root@97.107.130.14:/var/www/example.com/html/index.html /Example/example-user/Desktop/
 ```
 
 Or using `~` (safe now, since it's expanded by your Mac shell):
 
 ```bash
-scp root@97.107.130.14:/var/www/menniboefarm.com/html/index.html ~/Desktop/
+scp root@97.107.130.14:/var/www/example.com/html/index.html ~/Desktop/
 ```
 
 ## General Syntax
@@ -31,8 +31,8 @@ scp username@remote_ip:/path/to/remote/file /path/to/local/destination
 
 | Scenario | Command |
 |---|---|
-| Custom SSH port/key | `scp -P 2222 -i ~/.ssh/my_key.pem ubuntu@203.0.113.10:/home/ubuntu/file ~/Desktop/` |
-| Copy a folder | `scp -r ubuntu@203.0.113.10:/home/ubuntu/myfolder ~/Desktop/` |
+| Custom SSH port/key | `scp -P 2222 -i ~/.ssh/example-key.pem ubuntu@172.0.113.10:/home/ubuntu/file ~/Desktop/` |
+| Copy a folder | `scp -r ubuntu@172.0.113.10:/home/ubuntu/myfolder ~/Desktop/` |
 
 ## Key Takeaway
 
