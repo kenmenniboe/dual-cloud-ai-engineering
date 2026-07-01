@@ -55,3 +55,20 @@
 General lesson: when a platform-reported health status disagrees with
 what the app itself and external checks say, look at the *health check
 definition itself* as a suspect, not just the app.
+
+
+---
+
+Git commit message quoting gotcha
+
+
+git commit -m "..." with a multi-line message containing " or
+backticks can confuse the shell — it thinks the quote/backtick isn't
+closed and drops into a dquote> / bquote> prompt, waiting for you
+to close it.
+Fix: press Ctrl+C to escape, then write the message to a file and use:
+git commit -F commit-msg.txt
+This passes the message as literal text with no shell parsing of quotes
+or backticks inside it.
+Confirmed via git log -1 that the message committed cleanly despite
+the scary-looking terminal state.
