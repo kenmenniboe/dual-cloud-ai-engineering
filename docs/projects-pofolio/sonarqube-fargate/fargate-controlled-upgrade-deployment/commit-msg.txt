@@ -1,0 +1,17 @@
+ops: rehearse controlled-downtime upgrade deployment procedure for SonarQube
+
+- Confirmed 26.6.0.123539-community is the latest available SonarQube
+  Community Build; ran full upgrade procedure against real environment
+  as a dress rehearsal rather than building throwaway simulation infra
+- Took pre-upgrade RDS snapshot sonarqube-db-pre-upgrade-2026-07-01
+- Configured deployment for single-version cutover (no old/new task
+  overlap, since SonarQube schema migrations are one-way):
+  min running tasks 0%, max running tasks 101%, AZ rebalancing off
+- Diagnosed and fixed two deployment configuration errors (AZ rebalancing
+  vs max%, and max must exceed min) plus a stalled deployment caused by
+  zero available task capacity headroom
+- Caught and corrected a mistaken deploy of the wrong task definition
+  revision by cross-checking task ID and revision number against the
+  service Events tab, not just deployment status
+- Created and deployed sonarqube-task:5, verified drain/start/register
+  sequence via Events, confirmed Healthy status and live app
