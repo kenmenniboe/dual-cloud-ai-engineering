@@ -1,5 +1,7 @@
 # Azure Bastion + Jumpbox VM (AZ-104)
 
+![Azure VM Bastion connection](images/azurevm-bastion.jpg)
+
 ## Overview
 Deployed a secure jumpbox access pattern using Azure Bastion — a managed PaaS bastion host — to connect to a VM with **no public IP**, matching the AZ-104 "Deploying Jumpbox environment: Bastion and VM" module.
 
