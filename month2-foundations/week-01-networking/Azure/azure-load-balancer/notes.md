@@ -3,15 +3,25 @@
 Here's the roadmap used for this topic:
 
 **Module 1** – What a Load Balancer is & why it exists
+
 **Module 2** – Public vs. Internal Load Balancer
+
 **Module 3** – SKUs (Basic vs. Standard)
+
 **Module 4** – Frontend IP configuration
+
 **Module 5** – Backend pools
+
 **Module 6** – Health probes
+
 **Module 7** – Load balancing rules
+
 **Module 8** – NAT rules (inbound)
+
 **Module 9** – Distribution mode (5-tuple hash vs. session affinity)
+
 **Module 10** – Outbound rules & SNAT
+
 *(Advanced, after the above)* – HA Ports, Cross-Region Load Balancer, Standard vs. Basic in more depth
 
 ---
