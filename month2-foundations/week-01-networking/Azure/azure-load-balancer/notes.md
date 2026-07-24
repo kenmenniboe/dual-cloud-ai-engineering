@@ -341,6 +341,6 @@ See `commands.md` for a clean, copy-paste command list grouped by workflow stage
 
 ## Architecture Diagram
 
-![Azure Load Balancer Lab Architecture](images/lb-architecture.svg)
+![Azure Load Balancer Lab Architecture](images/LoadBlancer.pdf)
 
 The diagram shows: client traffic entering via the LB's public IP (`pip-lb-web`), the load balancing rule (`rule-http`) and health probe (`probe-http`) routing HTTP traffic into the backend pool (`backend-web-pool`), inbound NAT rules providing direct SSH access to each VM, the subnet-level NSG (`nsg-lb-lab`) gating all inbound traffic, and the outbound rule (`outbound-web`) providing the VMs' only path back out to the internet via SNAT.
