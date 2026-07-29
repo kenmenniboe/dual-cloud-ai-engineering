@@ -139,7 +139,8 @@ notes.md
 - Detailed tutorial of everything covered, including acronyms and what they mean
 - Can you please include the full hands-on build as a copy-paste redo guide — every step with exact Portal field values and CLI commands used, plus each error/fix (Portal validation failure) placed right where it occurred in the flow, not just referenced separately.
 - Add screenshot placeholders where relevant
-- Format like a reference guide I can return to
+- Format like a reference guide I can return to with all scenarios where relevant
+- Diagram — Final Architecture like a image or .pdf 
 
 
 commands.md (if any CLI commands were used)
