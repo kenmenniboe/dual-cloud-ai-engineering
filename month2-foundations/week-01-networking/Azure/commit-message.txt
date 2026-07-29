@@ -1,8 +1,0 @@
-Add Application Gateway lab: TLS via Key Vault, WAF, VMSS backend
-
-- Layer 7 routing, path-based rules, cookie affinity
-- HTTPS termination via Key Vault (RBAC) + managed identity
-- HTTP to HTTPS redirect
-- WAF_v2 upgrade with OWASP rules, confirmed 403 block on SQLi test
-- Fixed Portal Key Vault RBAC listener bug via CLI
-- Fixed retired direct-WAF-config error via WAF policy blade
