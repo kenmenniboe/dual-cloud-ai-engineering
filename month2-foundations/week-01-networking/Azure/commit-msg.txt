@@ -1,0 +1,10 @@
+Add Azure Front Door lab: global L7 LB, routing funnel, tiers, rule sets
+
+- Covered positioning vs Load Balancer/App Gateway/Traffic Manager
+- Built 2-region App Service + Front Door Standard lab with round-robin
+- Confirmed HTTPS redirect and X-Azure-FDID/X-Forwarded-Host headers
+- Added geo-match rule set (URL redirect) with address-bar verification
+- Fixed: wrong Docker image name, Microsoft.Cdn provider registration,
+  AFD propagation delay on rule set changes
+
+
