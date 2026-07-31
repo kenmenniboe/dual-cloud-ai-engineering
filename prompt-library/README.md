@@ -121,36 +121,30 @@ Start with Step 1 now.
 
 ```
 As a wrap-up, use what I learned in this chat session to generate three files for my GitHub repo.
-
-
 My daily folder naming convention is: topic/
 Example: azure-vnet/
 
-
 Generate the following three files:
-
 
 README.md
 - Short, clean summary of what I learned today
 - Include key outputs or results
 
-
 notes.md
 - Detailed tutorial of everything covered, including acronyms and what they mean
-- Can you please include the full hands-on build as a copy-paste redo guide — every step with exact Portal field values and CLI commands used, plus each error/fix (Portal validation failure) placed right where it occurred in the flow, not just referenced separately.
+- Include the full hands-on build as a copy-paste redo guide — every step with exact Portal field values and CLI commands used, plus each error/fix (Portal validation failure) placed right where it occurred in the flow, not just referenced separately.
 - Add screenshot placeholders where relevant
 - Format like a reference guide I can return to with all scenarios where relevant
-- Diagram — Final Architecture like a image or .pdf 
-
+- A table of contents at the top with jump links to every section, including each hands-on step
+- Color-coded GitHub alert boxes ([!WARNING], [!NOTE], [!TIP], [!IMPORTANT]) instead of plain quote blocks — the ones that render as colored callouts on GitHub, so errors/fixes visually pop out from the surrounding text
+- Diagram — Final Architecture like an image architecture diagram embedded inline. The diagram should be a real rendered SVG eg. (images/architecture-diagram.svg) — GitHub renders .svg natively in the file browser and in embedded![...] markdown images, so no conversion needed.
 
 commands.md (if any CLI commands were used)
 - Every command from the session, clean and copy-paste ready
 - Group by tool or workflow stage
 
-
-When it is all done, I will need a  git add, commit message, and  a one-line command that creates the folders and all three empty files in one shot:
+When it is all done, I will need a  git add, a short commit message, and a git push in as a single command, and  a one-line command that creates the folders and all three empty files in one shot:
 Example: mkdir -p topic/images && touch topic/{README.md,notes.md,commands.md}
-
 
 Base the content on everything we covered in this conversation.
 ```
