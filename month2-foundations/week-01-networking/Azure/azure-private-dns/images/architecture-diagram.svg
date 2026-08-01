@@ -1,0 +1,70 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="900" height="560" fill="#ffffff"/>
+
+  <!-- Resource Group container -->
+  <rect x="30" y="30" width="500" height="480" rx="10" fill="none" stroke="#0078D4" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="45" y="55" font-size="15" fill="#0078D4" font-weight="bold">Resource Group: rg-dns-lab</text>
+
+  <!-- VNet container -->
+  <rect x="55" y="75" width="450" height="185" rx="8" fill="#F3F9FF" stroke="#0078D4" stroke-width="1.5"/>
+  <text x="70" y="98" font-size="13" fill="#004578" font-weight="bold">VNet: vnet-dns-lab (10.0.0.0/16)</text>
+
+  <!-- default subnet -->
+  <rect x="75" y="112" width="195" height="130" rx="6" fill="#ffffff" stroke="#69A6CE"/>
+  <text x="85" y="132" font-size="12" fill="#333">Subnet: default</text>
+  <text x="85" y="147" font-size="11" fill="#666">10.0.0.0/24</text>
+  <rect x="90" y="160" width="160" height="65" rx="4" fill="#D6E8FA" stroke="#0078D4"/>
+  <text x="100" y="180" font-size="12" fill="#00335C" font-weight="bold">VM</text>
+  <text x="100" y="196" font-size="11" fill="#333">10.0.0.4</text>
+  <text x="100" y="211" font-size="10" fill="#555">no public IP</text>
+
+  <!-- Bastion subnet -->
+  <rect x="285" y="112" width="205" height="130" rx="6" fill="#ffffff" stroke="#69A6CE"/>
+  <text x="295" y="132" font-size="12" fill="#333">Subnet: AzureBastionSubnet</text>
+  <text x="295" y="147" font-size="11" fill="#666">10.0.1.0/26</text>
+  <rect x="300" y="160" width="175" height="65" rx="4" fill="#D6E8FA" stroke="#0078D4"/>
+  <text x="310" y="180" font-size="12" fill="#00335C" font-weight="bold">Azure Bastion</text>
+  <text x="310" y="196" font-size="10" fill="#333">secure entry point</text>
+  <text x="310" y="211" font-size="10" fill="#555">own public IP</text>
+
+  <!-- Private DNS zone box (global resource, drawn inside RG but outside VNet) -->
+  <rect x="55" y="285" width="450" height="200" rx="6" fill="#FFF8E5" stroke="#C79C00" stroke-width="1.5"/>
+  <text x="70" y="308" font-size="13" fill="#7A5D00" font-weight="bold">Private DNS Zone: internal.corp</text>
+  <text x="70" y="323" font-size="10" fill="#7A5D00" font-style="italic">(global resource, not tied to one VNet)</text>
+
+  <text x="70" y="348" font-size="11" fill="#333" font-family="Consolas, monospace">app1        A      10.0.0.4</text>
+  <text x="70" y="365" font-size="11" fill="#333" font-family="Consolas, monospace">app2        CNAME  microsoft.com</text>
+  <text x="70" y="382" font-size="11" fill="#333" font-family="Consolas, monospace">vm000000/1  A      auto-registered (TTL 10s)</text>
+
+  <rect x="70" y="398" width="410" height="70" rx="4" fill="#ffffff" stroke="#C79C00" stroke-dasharray="3,3"/>
+  <text x="80" y="418" font-size="11" fill="#7A5D00" font-weight="bold">Virtual Network Link → vnet-dns-lab</text>
+  <text x="80" y="435" font-size="10" fill="#7A5D00">Auto-registration: ON</text>
+  <text x="80" y="452" font-size="10" fill="#7A5D00">(peering to other VNets would NOT extend this link)</text>
+
+  <!-- Public internet -->
+  <ellipse cx="740" cy="150" rx="115" ry="70" fill="#EAF7EA" stroke="#2E7D32" stroke-width="1.5"/>
+  <text x="695" y="140" font-size="13" fill="#1B5E20" font-weight="bold">Public Internet</text>
+  <text x="670" y="160" font-size="11" fill="#333">microsoft.com</text>
+  <text x="655" y="176" font-size="10" fill="#333">150.171.109.183 (A)</text>
+  <text x="655" y="190" font-size="10" fill="#333">2603:... (AAAA)</text>
+
+  <!-- Arrow: CNAME resolves out to internet -->
+  <line x1="480" y1="360" x2="660" y2="195" stroke="#2E7D32" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="500" y="290" font-size="10" fill="#2E7D32">CNAME chain</text>
+  <text x="500" y="303" font-size="10" fill="#2E7D32">resolves to public DNS</text>
+
+  <!-- Arrow: VM queries the zone -->
+  <line x1="170" y1="225" x2="170" y2="285" stroke="#0078D4" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <text x="178" y="260" font-size="10" fill="#0078D4">nslookup</text>
+
+  <defs>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2E7D32"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0078D4"/>
+    </marker>
+  </defs>
+
+  <text x="45" y="535" font-size="10" fill="#888">Azure Private DNS Zone Lab — Final Architecture</text>
+</svg>
