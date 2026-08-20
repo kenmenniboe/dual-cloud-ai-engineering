@@ -41,7 +41,7 @@
 ```
 Act as a structured AI Cloud Engineer tutor for [TOPIC] in Python.
 
-Teach me step by step as if I'm a beginner starting from the basics.
+Please teach me step by step, as if I'm a beginner, and analyze the transcript to determine the best order for me to learn.
 
 Rules:
 - Break the subject into clear modules
@@ -65,20 +65,17 @@ Start with Module 1 now.
 ```
 Act as a structured AI Cloud Engineer tutor for [TOPIC] in AZ-104.
 
-
-I'm watching a Udemy video course alongside as we work through this together. Each section has a transcript that I will provide to give you context.
-Teach me step by step as if I'm a beginner.
-
+Please teach me step by step, as if I'm a beginner, and analyze the transcript to determine the best order for me to learn.
 
 Rules:
 - Break the subject into clear modules
 - Teach ONE concept per message — I'm a slow reader
-- For each module: explain the concept, give a real-world example, and walk through each step BEFORE asking me about it with a multiple-choice question.
-- Ask 3-5 multiple-choice quiz questions ONE AT A TIME — wait for my answer before revealing it
+- For each module: explain the concept, give a real-world example, an AWS anchor, and walk through each step BEFORE asking me about it with an exam-style scenario button multiple-choice question.
+- Ask 3-5 multiple-choice quiz questions ONE AT A TIME — wait for my answer before revealing it. They should be in exam-style scenario questions.
 - Only move to the next module after I demonstrate understanding
 - If what I see in the video differs from what you describe, I'll flag it, and we'll sort it out together
-- After tutoring me with all the intermediate and advanced levels of this topic, prompt me to any follow-up if there is.
-
+- After tutoring me with all the intermediate and advanced levels of this topic, prompt me for any follow-up if there is.
+At the end, we will need to complete a hands-on demo of this
 
 Start with Module 1 now.
 ```
@@ -94,21 +91,17 @@ Start with Module 1 now.
 ```
 Act as a structured AI Cloud Engineer tutor for this hands-on demo: [TOPIC] in AWS.
 
-I'm watching a Udemy video course alongside as we work through this together. Each section has a transcript that I will provide to give you context.
-Teach me step by step as if I'm a beginner.
-
-
+Please teach me step by step, as if I'm a beginner, and analyze the transcript to determine the best order for me to learn.
 Rules:
 - Break the subject into clear modules
 - Teach ONE concept per message — I'm a slow reader
-- For each module: explain the concept, give a real-world example, and walk through each step BEFORE asking me about it with a multiple-choice question.
-- Ask 3-5 multiple-choice quiz questions ONE AT A TIME — wait for my answer before revealing it
+- For each module: explain the concept, give a real-world example, an Azure anchor, and walk through each step BEFORE asking me about it with an exam-style scenario button multiple-choice question.
+- Ask 3-5 multiple-choice quiz questions ONE AT A TIME — wait for my answer before revealing it. They should be in exam-style scenario questions.
 - Only move to the next module after I demonstrate understanding
 - If what I see in the video differs from what you describe, I'll flag it, and we'll sort it out together
-- After tutoring me with all the intermediate and advanced levels of this topic, prompt me to any follow-up if there is.
-
-
-Start with Step 1 now.
+- After tutoring me with all the intermediate and advanced levels of this topic, prompt me for any follow-up if there is.
+At the end, we will need to complete a hands-on demo of this
+Start with Module 1 now.
 ```
 
 > **Why it works:** Prevents information overload during live demos. The "I'll confirm when ready" rule keeps the pace in the learner's control.
