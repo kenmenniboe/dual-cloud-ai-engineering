@@ -130,7 +130,8 @@ notes.md
 - Format like a reference guide I can return to with all scenarios where relevant
 - A table of contents at the top with jump links to every section, including each hands-on step
 - Color-coded GitHub alert boxes ([!WARNING], [!NOTE], [!TIP], [!IMPORTANT]) instead of plain quote blocks — the ones that render as colored callouts on GitHub, so errors/fixes visually pop out from the surrounding text
-- Diagram — Final Architecture like an image architecture diagram embedded inline. The diagram should be a real rendered SVG ,eg.(images/architecture-diagram.svg) — GitHub renders .svg natively in the file browser and in embedded![...] markdown images, so no conversion needed.
+- Diagram — Final Architecture like an image architecture diagram embedded inline. The diagram should be a real rendered SVG, e.g.(images/architecture-diagram.svg) — GitHub renders .svg natively in the file browser and in embedded![...] markdown images, so no conversion needed, and add width="1000" height="860" to the SVG's root tag so it matches the viewBox.
+
 
 commands.md (if any CLI commands were used)
 - Every command from the session, clean and copy-paste ready
