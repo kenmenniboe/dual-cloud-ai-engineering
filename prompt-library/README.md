@@ -63,21 +63,24 @@ Start with Module 1 now.
 **Use when:** Watching a Udemy or video course and want Claude as a side-by-side study partner.
 
 ```
-Act as a structured AI Cloud Engineer tutor for [TOPIC] in AZ-104.
-
-Please teach me step by step, as if I'm a beginner, and analyze the transcript to determine the best order for me to learn.
-
+Act as my structured AI Cloud Engineer tutor for [topic] in [AZ 104].
+I have no Azure experience: start from fundamentals but move at an
+intermediate pace, then go advanced. Transcript: [PASTE].
 Rules:
-- Break the subject into clear modules
-- Teach ONE concept per message — I'm a slow reader
-- For each module: explain the concept, give a real-world example, an AWS anchor, and walk through each step BEFORE asking me about it with an exam-style scenario button multiple-choice question.
-- Ask 3-5 multiple-choice quiz questions ONE AT A TIME — wait for my answer before revealing it. They should be in exam-style scenario questions.
-- Only move to the next module after I demonstrate understanding
-- If what I see in the video differs from what you describe, I'll flag it, and we'll sort it out together
-- After tutoring me with all the intermediate and advanced levels of this topic, prompt me for any follow-up if there is.
-At the end, we will need to complete a hands-on demo of this
-
-Start with Module 1 now.
+- First, show me the finished or final architecture/big diagram or picture, then break the
+  topic into modules in the best learning order (from the transcript when provided).
+- Start each session with 2–3 quick recall questions on earlier topics.
+- ONE concept per message: start with an architecture diagram or picture that explains it, explain it, give a real-world example, an
+  AWS anchor, and walk through the steps BEFORE quizzing me.
+- Quiz with 3–5 exam-style scenario multiple-choice questions (buttons flashcard),
+  one at a time, plus one "explain it in your own words" question.
+- Aim for ~85% correct: increase difficulty for that module question if I'm acing it; slow down
+  if I'm under 70%.
+- Understanding = at least 3 of 4 correct AND a clear teach-back.
+  Only then move to the next module.
+- After intermediate + advanced coverage, ask for follow-ups,
+  then run a hands-on demo.
+Start with Module 1
 ```
 
 > **Why it works:** Syncs Claude's pacing to a live video session. The "I'll flag it" rule prevents confusion when course UI differs from Claude's description.
@@ -89,19 +92,24 @@ Start with Module 1 now.
 **Use when:** Following along with a hands-on AWS lab or demo video.
 
 ```
-Act as a structured AI Cloud Engineer tutor for this hands-on demo: [TOPIC] in AWS.
-
-Please teach me step by step, as if I'm a beginner, and analyze the transcript to determine the best order for me to learn.
+Act as my structured AI Cloud Engineer tutor for [topic] in [cert].
+I have prior AWS experience: start from fundamentals but move at an
+intermediate pace, then go advanced. Transcript: [PASTE].
 Rules:
-- Break the subject into clear modules
-- Teach ONE concept per message — I'm a slow reader
-- For each module: explain the concept, give a real-world example, an Azure anchor, and walk through each step BEFORE asking me about it with an exam-style scenario button multiple-choice question.
-- Ask 3-5 multiple-choice quiz questions ONE AT A TIME — wait for my answer before revealing it. They should be in exam-style scenario questions.
-- Only move to the next module after I demonstrate understanding
-- If what I see in the video differs from what you describe, I'll flag it, and we'll sort it out together
-- After tutoring me with all the intermediate and advanced levels of this topic, prompt me for any follow-up if there is.
-At the end, we will need to complete a hands-on demo of this
-Start with Module 1 now.
+- First, show me the finished or final architecture/big diagram or picture, then break the
+  topic into modules in the best learning order (from the transcript when provided).
+- Start each session with 2–3 quick recall questions on earlier topics.
+- ONE concept per message: start with an architecture diagram or picture that explains it, explain it, give a real-world example, an
+  Azure anchor, and walk through the steps BEFORE quizzing me.
+- Quiz with 3–5 exam-style scenario multiple-choice questions (buttons flashcard),
+  one at a time, plus one "explain it in your own words" question.
+- Aim for ~85% correct: increase difficulty for that module question if I'm acing it; slow down
+  if I'm under 70%.
+- Understanding = at least 3 of 4 correct AND a clear teach-back.
+  Only then move to the next module.
+- After intermediate + advanced coverage, ask for follow-ups,
+  then run a hands-on demo.
+Start with Module 1.
 ```
 
 > **Why it works:** Prevents information overload during live demos. The "I'll confirm when ready" rule keeps the pace in the learner's control.
@@ -113,7 +121,7 @@ Start with Module 1 now.
 **Use when:** End of a study session — generating clean GitHub files from what you learned.
 
 ```
-As a wrap-up, use what I learned in this chat session to generate three files for my GitHub repo.
+As a wrap-up, use what I learned in this chat session to generate three files and a folder for my GitHub repo.
 My daily folder naming convention is: topic/
 Example: azure-vnet/
 
@@ -126,11 +134,12 @@ README.md
 notes.md
 - Detailed tutorial of everything covered, including acronyms and what they mean
 - Include the full hands-on build as a copy-paste redo guide — every step with exact Portal field values and CLI commands used, plus each error/fix (Portal validation failure) placed right where it occurred in the flow, not just referenced separately.
-- Add screenshot placeholders where relevant
+- Add screenshot placeholders where relevant, plus all diagrams or images, and screenshots shared during the lab where it occurred. 
+- Redact any personal info or sensitive information.
 - Format like a reference guide I can return to with all scenarios where relevant
 - A table of contents at the top with jump links to every section, including each hands-on step
 - Color-coded GitHub alert boxes ([!WARNING], [!NOTE], [!TIP], [!IMPORTANT]) instead of plain quote blocks — the ones that render as colored callouts on GitHub, so errors/fixes visually pop out from the surrounding text
-- Diagram — Final Architecture like an image architecture diagram embedded inline. The diagram should be a real rendered SVG, e.g.(images/architecture-diagram.svg) — GitHub renders .svg natively in the file browser and in embedded![...] markdown images, so no conversion needed, and add width="1000" height="860" to the SVG's root tag so it matches the viewBox.
+- Diagram — Final architecture like an image architecture diagram embedded inline. The diagram should be a real rendered SVG, e.g.,(images/architecture-diagram.svg) — GitHub renders .svg natively in the file browser and in embedded![...] markdown images, so no conversion needed, and add width="1000" height="860" to the SVG's root tag so it matches the viewBox.
 
 
 commands.md (if any CLI commands were used)

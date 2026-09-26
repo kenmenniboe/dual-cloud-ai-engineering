@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 860" width="1000" height="860" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="860" fill="#ffffff"/>
+
+  <text x="500" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f2a1f">AWS Edge Services — CloudFront vs Global Accelerator</text>
+  <text x="500" y="62" text-anchor="middle" font-size="13.5" fill="#5b6c59">Same global edge network, two different jobs</text>
+
+  <!-- USERS -->
+  <rect x="370" y="86" width="260" height="46" rx="8" fill="#e8f3e1" stroke="#7aa36b" stroke-width="1.5"/>
+  <text x="500" y="115" text-anchor="middle" font-size="15.5" font-weight="bold" fill="#234d23">USERS (worldwide)</text>
+
+  <line x1="500" y1="132" x2="500" y2="162" stroke="#5b6c59" stroke-width="2"/>
+  <polygon points="500,170 494,158 506,158" fill="#5b6c59"/>
+
+  <!-- EDGE BAND -->
+  <rect x="80" y="172" width="840" height="58" rx="8" fill="#fff4e0" stroke="#c9892b" stroke-width="1.5"/>
+  <text x="500" y="196" text-anchor="middle" font-size="15.5" font-weight="bold" fill="#8a5c10">AWS EDGE LOCATIONS / Points of Presence (600+)</text>
+  <text x="500" y="217" text-anchor="middle" font-size="12.5" fill="#8a5c10">Shared by both services · AWS Shield DDoS protection built in</text>
+
+  <line x1="280" y1="230" x2="280" y2="268" stroke="#5b6c59" stroke-width="2"/>
+  <polygon points="280,276 274,264 286,264" fill="#5b6c59"/>
+  <line x1="720" y1="230" x2="720" y2="268" stroke="#5b6c59" stroke-width="2"/>
+  <polygon points="720,276 714,264 726,264" fill="#5b6c59"/>
+
+  <!-- CLOUDFRONT -->
+  <rect x="80" y="278" width="390" height="150" rx="10" fill="#eef4fb" stroke="#3a6ea5" stroke-width="2"/>
+  <text x="275" y="306" text-anchor="middle" font-size="17" font-weight="bold" fill="#1d4d7c">CLOUDFRONT (CDN)</text>
+  <text x="275" y="332" text-anchor="middle" font-size="13" fill="#1d4d7c">CACHES content at the edge</text>
+  <text x="275" y="354" text-anchor="middle" font-size="13" fill="#1d4d7c">HTTP / HTTPS only</text>
+  <text x="275" y="376" text-anchor="middle" font-size="13" fill="#1d4d7c">TTL-based — default 24 h (86,400 s)</text>
+  <text x="275" y="398" text-anchor="middle" font-size="13" fill="#1d4d7c">Geo restriction · WAF · invalidations</text>
+  <text x="275" y="419" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d4d7c">Memory hook: "Copies"</text>
+
+  <!-- GLOBAL ACCELERATOR -->
+  <rect x="530" y="278" width="390" height="150" rx="10" fill="#f6eefb" stroke="#7a4da5" stroke-width="2"/>
+  <text x="725" y="306" text-anchor="middle" font-size="17" font-weight="bold" fill="#5a2f80">GLOBAL ACCELERATOR</text>
+  <text x="725" y="332" text-anchor="middle" font-size="13" fill="#5a2f80">PROXIES traffic — NO caching</text>
+  <text x="725" y="354" text-anchor="middle" font-size="13" fill="#5a2f80">TCP / UDP — any protocol</text>
+  <text x="725" y="376" text-anchor="middle" font-size="13" fill="#5a2f80">2 static Anycast IPs (never change)</text>
+  <text x="725" y="398" text-anchor="middle" font-size="13" fill="#5a2f80">Health checks · failover &lt; 1 min</text>
+  <text x="725" y="419" text-anchor="middle" font-size="13" font-weight="bold" fill="#5a2f80">Memory hook: "Gets you there"</text>
+
+  <line x1="275" y1="428" x2="275" y2="470" stroke="#3a6ea5" stroke-width="2"/>
+  <polygon points="275,478 269,466 281,466" fill="#3a6ea5"/>
+  <text x="288" y="455" font-size="11.5" fill="#3a6ea5">OAC-signed request</text>
+
+  <line x1="725" y1="428" x2="725" y2="470" stroke="#7a4da5" stroke-width="2"/>
+  <polygon points="725,478 719,466 731,466" fill="#7a4da5"/>
+  <text x="738" y="455" font-size="11.5" fill="#7a4da5">AWS private backbone</text>
+
+  <!-- ORIGINS -->
+  <rect x="80" y="480" width="390" height="150" rx="10" fill="#f7f9f5" stroke="#7aa36b" stroke-width="1.5"/>
+  <text x="275" y="506" text-anchor="middle" font-size="15" font-weight="bold" fill="#234d23">ORIGINS</text>
+  <text x="275" y="530" text-anchor="middle" font-size="12.5" fill="#3c4d3a">S3 bucket — PRIVATE, secured by OAC</text>
+  <text x="275" y="552" text-anchor="middle" font-size="12.5" fill="#3c4d3a">VPC origin — private ALB / NLB / EC2</text>
+  <text x="275" y="574" text-anchor="middle" font-size="12.5" fill="#3c4d3a">Custom HTTP origin — public ALB / EC2</text>
+  <text x="275" y="596" text-anchor="middle" font-size="12.5" fill="#3c4d3a">S3 website endpoint = custom origin (no OAC)</text>
+  <text x="275" y="620" text-anchor="middle" font-size="12" font-style="italic" fill="#8a5c10">Direct S3 URL → 403 AccessDenied</text>
+
+  <!-- ENDPOINTS -->
+  <rect x="530" y="480" width="390" height="150" rx="10" fill="#f7f9f5" stroke="#7aa36b" stroke-width="1.5"/>
+  <text x="725" y="506" text-anchor="middle" font-size="15" font-weight="bold" fill="#234d23">ENDPOINTS (1 or more regions)</text>
+  <text x="725" y="530" text-anchor="middle" font-size="12.5" fill="#3c4d3a">Accelerator → Listener → Endpoint group</text>
+  <text x="725" y="552" text-anchor="middle" font-size="12.5" fill="#3c4d3a">Endpoint group = ONE region</text>
+  <text x="725" y="574" text-anchor="middle" font-size="12.5" fill="#3c4d3a">Endpoints: ALB / NLB / EC2 / Elastic IP</text>
+  <text x="725" y="596" text-anchor="middle" font-size="12.5" fill="#3c4d3a">Health checks live on the endpoint group</text>
+  <text x="725" y="620" text-anchor="middle" font-size="12" font-style="italic" fill="#8a5c10">Failover to healthy region in &lt; 1 min</text>
+
+  <!-- LAB BUILD -->
+  <rect x="80" y="660" width="840" height="122" rx="10" fill="#f3f8ef" stroke="#7aa36b" stroke-width="1.5"/>
+  <text x="500" y="686" text-anchor="middle" font-size="15" font-weight="bold" fill="#234d23">WHAT WAS BUILT IN THIS LAB</text>
+  <text x="500" y="712" text-anchor="middle" font-size="12.5" fill="#3c4d3a">Namecheap registrar → Route 53 hosted zone (A + AAAA alias, apex and www)</text>
+  <text x="500" y="734" text-anchor="middle" font-size="12.5" fill="#3c4d3a">→ ACM certificate in us-east-1 (DNS validation) → CloudFront distribution (Free plan)</text>
+  <text x="500" y="756" text-anchor="middle" font-size="12.5" fill="#3c4d3a">→ OAC → private S3 bucket (Block Public Access ON, 11 objects)</text>
+  <text x="500" y="775" text-anchor="middle" font-size="12" font-style="italic" fill="#8a5c10">HTTP → 301 → HTTPS · default root object index.html · TLSv1.2_2021</text>
+
+  <text x="500" y="820" text-anchor="middle" font-size="12.5" fill="#5b6c59">Azure anchors — CloudFront ≈ Azure Front Door · Global Accelerator ≈ Azure cross-region Load Balancer</text>
+  <text x="500" y="842" text-anchor="middle" font-size="12.5" fill="#5b6c59">OAC ≈ managed identity + Key Vault RBAC · Geo restriction ≈ Front Door WAF geo-filtering</text>
+</svg>
