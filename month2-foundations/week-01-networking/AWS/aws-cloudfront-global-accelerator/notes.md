@@ -2099,11 +2099,3 @@ aws s3 rb s3://<BUCKET>
 | Block one malicious IP | **NACL** |
 
 ---
-
-## Still To Do
-
-- [ ] **Lab B — Global Accelerator**: EC2 in two regions, endpoint groups, health checks, live failover test
-- [ ] Module 9 and Module 10 teach-backs (deferred)
-- [ ] NACL ephemeral-port mini-lab in a test VPC
-- [ ] CloudFront Function for subfolder `index.html` handling
-- [ ] Rebuild this stack in **Terraform** (`aws_cloudfront_distribution`, `aws_cloudfront_origin_access_control`)

@@ -160,9 +160,3 @@ http://menniboefarm.com/        → 301 Moved Permanently (Server: CloudFront)
 > the account ID.
 
 ---
-
-## Still To Do
-
-- **Lab B — Global Accelerator**: EC2 in two regions, endpoint groups, health checks, live failover test
-- Teach-backs for Modules 9 and 10 (deferred — see `notes.md`)
-- Subfolder `index.html` handling via a CloudFront Function
