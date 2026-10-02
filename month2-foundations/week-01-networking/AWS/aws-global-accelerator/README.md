@@ -117,6 +117,4 @@ security groups removed.
 | `images/architecture-diagram.svg` | Final architecture |
 | `screenshots/` | 18 lab screenshots, embedded inline in `notes.md` |
 
-> Screenshots are machine-redacted: AWS account ID, local username and hostname blacked out.
-
 ---
