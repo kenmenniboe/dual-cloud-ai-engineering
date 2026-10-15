@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="940" viewBox="0 0 1400 940" font-family="Amazon Ember, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#232F3E"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C7131F"/>
+    </marker>
+    <style>
+      .grp{fill:none;stroke:#545B64;stroke-width:1.6;stroke-dasharray:7 5}
+      .gl{font-size:15px;font-weight:700;fill:#232F3E}
+      .sub{font-size:12px;fill:#545B64}
+      .tl{font-size:13px;font-weight:700;fill:#232F3E;text-anchor:middle}
+      .ts{font-size:11px;fill:#545B64;text-anchor:middle}
+      .gly{fill:#fff;font-size:22px;font-weight:700;text-anchor:middle}
+      .al{font-size:12px;fill:#232F3E}
+      .alr{font-size:12px;fill:#C7131F;font-weight:700}
+      .ln{stroke:#232F3E;stroke-width:1.8;fill:none;marker-end:url(#arr)}
+      .lnd{stroke:#232F3E;stroke-width:1.5;fill:none;stroke-dasharray:5 4;marker-end:url(#arr)}
+      .lnr{stroke:#C7131F;stroke-width:1.8;fill:none;stroke-dasharray:6 4;marker-end:url(#arrR)}
+    </style>
+  </defs>
+  <rect width="1400" height="940" fill="#FFFFFF"/>
+  <text x="30" y="38" font-size="22" font-weight="700" fill="#232F3E">Menniboe Farm on Amazon ECS: Phase 1 (Fargate) and Phase 2 (EC2 + capacity provider)</text>
+  <text x="30" y="60" class="sub">us-east-1 · default VPC · 3 AZs (1a, 1b, 1c) · one ALB and one ip-type target group shared by both phases</text>
+
+  <!-- Users -->
+  <rect x="30" y="110" width="170" height="150" class="grp"/>
+  <text x="42" y="132" class="gl">Users</text>
+  <rect x="80" y="150" width="70" height="70" rx="8" fill="#232F3E"/><text x="115" y="194" class="gly">👤</text>
+  <text x="115" y="240" class="tl">Browser / ab</text>
+
+  <!-- Build -->
+  <rect x="30" y="300" width="170" height="270" class="grp"/>
+  <text x="42" y="322" class="gl">Build (Mac)</text>
+  <rect x="80" y="340" width="70" height="70" rx="8" fill="#2E73B8"/><text x="115" y="384" class="gly">D</text>
+  <text x="115" y="428" class="tl">Docker</text>
+  <text x="115" y="443" class="ts">--platform linux/amd64</text>
+  <text x="115" y="470" class="ts">nginx:1.30.5-alpine</text>
+  <text x="115" y="485" class="ts">+ apk upgrade</text>
+  <text x="115" y="500" class="ts">menniboe-farm:1.1</text>
+  <text x="115" y="530" class="ts">0 CVEs after fix</text>
+  <text x="115" y="545" class="ts">(1.0 had 7 critical)</text>
+
+  <!-- AWS Cloud -->
+  <rect x="240" y="90" width="1130" height="820" class="grp"/>
+  <text x="254" y="112" class="gl">AWS Cloud · us-east-1</text>
+
+  <!-- ECR -->
+  <rect x="270" y="380" width="70" height="70" rx="8" fill="#ED7100"/><text x="305" y="424" class="gly">⬢</text>
+  <text x="305" y="468" class="tl">Amazon ECR</text>
+  <text x="305" y="483" class="ts">menniboe-farm</text>
+  <text x="305" y="498" class="ts">scan on push</text>
+
+  <!-- VPC -->
+  <rect x="380" y="130" width="740" height="760" class="grp" style="stroke:#8C4FFF"/>
+  <text x="394" y="152" class="gl" fill="#8C4FFF">VPC (default) · 172.31.0.0/16</text>
+
+  <!-- ALB -->
+  <rect x="420" y="170" width="660" height="110" class="grp"/>
+  <text x="432" y="190" class="gl">Load balancing</text>
+  <rect x="460" y="200" width="60" height="60" rx="8" fill="#8C4FFF"/><text x="490" y="239" class="gly">⇆</text>
+  <text x="630" y="228" class="tl">farm-alb (ALB)</text>
+  <text x="630" y="244" class="ts">HTTP:80 listener · SG farm-alb-sg</text>
+  <text x="630" y="259" class="ts">0.0.0.0/0 → 80</text>
+  <rect x="760" y="200" width="60" height="60" rx="8" fill="#8C4FFF"/><text x="790" y="239" class="gly">◎</text>
+  <text x="920" y="222" class="tl">farm-tg (target type: ip)</text>
+  <text x="920" y="238" class="ts">health check GET /health → 200</text>
+  <text x="920" y="253" class="ts">deregistration delay 30s</text>
+  <path d="M520,205 L755,205" class="ln"/>
+
+  <!-- ECS Cluster -->
+  <rect x="420" y="310" width="660" height="560" class="grp" style="stroke:#ED7100"/>
+  <text x="432" y="330" class="gl">ECS cluster: DemoCluster</text>
+
+  <!-- Phase 1 -->
+  <rect x="440" y="345" width="620" height="190" class="grp"/>
+  <text x="452" y="365" class="gl">Phase 1 · service farm-svc · capacity provider FARGATE</text>
+  <text x="452" y="382" class="sub">tasks get their own ENI + public IP · SG farm-task-sg (80 from farm-alb-sg only)</text>
+  <g>
+    <rect x="470" y="400" width="170" height="115" rx="6" fill="#FFF7EF" stroke="#ED7100"/>
+    <rect x="525" y="410" width="60" height="60" rx="8" fill="#ED7100"/><text x="555" y="449" class="gly">F</text>
+    <text x="555" y="488" class="tl">Fargate task</text><text x="555" y="503" class="ts">us-east-1a</text>
+    <rect x="665" y="400" width="170" height="115" rx="6" fill="#FFF7EF" stroke="#ED7100"/>
+    <rect x="720" y="410" width="60" height="60" rx="8" fill="#ED7100"/><text x="750" y="449" class="gly">F</text>
+    <text x="750" y="488" class="tl">Fargate task</text><text x="750" y="503" class="ts">us-east-1b</text>
+    <rect x="860" y="400" width="170" height="115" rx="6" fill="#FFF7EF" stroke="#ED7100"/>
+    <rect x="915" y="410" width="60" height="60" rx="8" fill="#ED7100"/><text x="945" y="449" class="gly">F</text>
+    <text x="945" y="488" class="tl">Fargate task</text><text x="945" y="503" class="ts">us-east-1c</text>
+  </g>
+
+  <!-- Phase 2 -->
+  <rect x="440" y="555" width="620" height="300" class="grp"/>
+  <text x="452" y="575" class="gl">Phase 2 · service farm-svc-ec2 · capacity provider farm-ecs-cp</text>
+  <text x="452" y="592" class="sub">ASG farm-ecs-asg (0/0/3) · launch template farm-ecs-lt · ECS-optimized AL2023 · t3.micro · ecsInstanceRole</text>
+  <g>
+    <rect x="470" y="610" width="170" height="150" rx="6" fill="#FFF7EF" stroke="#ED7100"/>
+    <text x="555" y="628" class="ts">EC2 t3.micro · 1a</text>
+    <rect x="525" y="636" width="60" height="60" rx="8" fill="#ED7100"/><text x="555" y="675" class="gly">C</text>
+    <text x="555" y="714" class="tl">task + task ENI</text><text x="555" y="729" class="ts">ECS agent registers</text><text x="555" y="744" class="ts">2 ENIs → 1 task max</text>
+    <rect x="665" y="610" width="170" height="150" rx="6" fill="#FFF7EF" stroke="#ED7100"/>
+    <text x="750" y="628" class="ts">EC2 t3.micro · 1b</text>
+    <rect x="720" y="636" width="60" height="60" rx="8" fill="#ED7100"/><text x="750" y="675" class="gly">C</text>
+    <text x="750" y="714" class="tl">task + task ENI</text><text x="750" y="729" class="ts">no public IP on task</text><text x="750" y="744" class="ts">(awsvpc on EC2)</text>
+    <rect x="860" y="610" width="170" height="150" rx="6" fill="#FFF7EF" stroke="#ED7100"/>
+    <text x="945" y="628" class="ts">EC2 t3.micro · 1c</text>
+    <rect x="915" y="636" width="60" height="60" rx="8" fill="#ED7100"/><text x="945" y="675" class="gly">C</text>
+    <text x="945" y="714" class="tl">task + task ENI</text><text x="945" y="729" class="ts">SG must be</text><text x="945" y="744" class="ts">farm-task-sg</text>
+  </g>
+  <text x="470" y="790" class="alr">⚠ Bug hit: console pre-selected the VPC "default" SG on task ENIs</text>
+  <text x="470" y="808" class="alr">→ ALB health checks "Request timed out" → unhealthy → replaced → ENI deadlock</text>
+  <text x="470" y="826" class="al">Fix: Update service → SG farm-task-sg, min 0% / max 120% (rounds down to 3)</text>
+  <text x="470" y="844" class="al">Scale-out from zero: 0 → 2 → 3 instances (CapacityProviderReservation 200% → exact)</text>
+
+  <!-- arrows ALB->tasks -->
+  <path d="M790,262 C790,330 760,350 750,395" class="ln"/>
+  <text x="800" y="300" class="al">forward to task IPs</text>
+  <path d="M822,262 C1100,262 1100,690 1035,690" class="ln"/>
+  <text x="975" y="300" class="al">Phase 2 task IPs</text>
+
+  <!-- Users -> ALB -->
+  <path d="M150,185 C300,185 330,205 455,205" class="ln"/>
+  <text x="250" y="178" class="al">HTTP :80</text>
+  <!-- Build -> ECR -->
+  <path d="M150,380 C210,380 220,415 265,415" class="ln"/>
+  <text x="170" y="370" class="al">docker push</text>
+  <!-- ECR -> tasks -->
+  <path d="M340,415 C400,415 420,455 465,455" class="lnd"/>
+  <path d="M340,430 C400,520 420,670 465,670" class="lnd"/>
+  <text x="305" y="525" class="tl">image pull</text>
+  <text x="305" y="540" class="ts">(execution role)</text>
+  <!-- negative test -->
+  <path d="M120,262 C120,300 380,330 465,430" class="lnr"/>
+  <text x="200" y="292" class="alr">✗ direct to task public IP → timeout</text>
+
+  <!-- Right side: ops -->
+  <rect x="1150" y="130" width="200" height="380" class="grp"/>
+  <text x="1162" y="152" class="gl">Scaling</text>
+  <rect x="1215" y="170" width="60" height="60" rx="8" fill="#E7157B"/><text x="1245" y="209" class="gly">⌁</text>
+  <text x="1245" y="248" class="tl">CloudWatch alarms</text>
+  <text x="1245" y="263" class="ts">High: &gt;100 · 3 of 3 min</text>
+  <text x="1245" y="278" class="ts">Low: &lt;90 · 15 of 15 min</text>
+  <rect x="1215" y="300" width="60" height="60" rx="8" fill="#E7157B"/><text x="1245" y="339" class="gly">⤢</text>
+  <text x="1245" y="378" class="tl">App Auto Scaling</text>
+  <text x="1245" y="393" class="ts">farm-requests-tt</text>
+  <text x="1245" y="408" class="ts">ALBRequestCountPerTarget=100</text>
+  <text x="1245" y="423" class="ts">farm-svc tasks 0–6</text>
+  <text x="1245" y="450" class="tl">ECS managed scaling</text>
+  <text x="1245" y="465" class="ts">CapacityProviderReservation</text>
+  <text x="1245" y="480" class="ts">target 100% → ASG desired</text>
+  <path d="M1245,284 L1245,295" class="ln"/>
+  <path d="M1150,330 C1110,330 1110,450 1065,450" class="lnd"/>
+  <path d="M1150,470 C1110,470 1110,600 1065,600" class="lnd"/>
+
+  <rect x="1150" y="540" width="200" height="350" class="grp"/>
+  <text x="1162" y="562" class="gl">Alerting</text>
+  <rect x="1215" y="580" width="60" height="60" rx="8" fill="#E7157B"/><text x="1245" y="619" class="gly">⚡</text>
+  <text x="1245" y="658" class="tl">EventBridge rule</text>
+  <text x="1245" y="673" class="ts">farm-task-stopped</text>
+  <text x="1245" y="688" class="ts">ECS Task State Change</text>
+  <text x="1245" y="703" class="ts">lastStatus = STOPPED</text>
+  <rect x="1215" y="725" width="60" height="60" rx="8" fill="#E7157B"/><text x="1245" y="764" class="gly">✉</text>
+  <text x="1245" y="803" class="tl">SNS farm-task-alerts</text>
+  <text x="1245" y="818" class="ts">email subscription</text>
+  <text x="1245" y="845" class="ts">invoked via role</text>
+  <text x="1245" y="860" class="ts">Amazon_EventBridge_Invoke_Sns_*</text>
+  <path d="M1245,709 L1245,720" class="ln"/>
+  <path d="M1065,780 C1110,780 1120,610 1210,610" class="lnd"/>
+  <text x="1080" y="880" class="al">task events</text>
+</svg>
