@@ -134,7 +134,7 @@ README.md
 notes.md
 - Detailed tutorial of everything covered, including acronyms and what they mean
 - Include the full hands-on build as a copy-paste redo guide — every step with exact Portal field values and CLI commands used, plus each error/fix (Portal validation failure) placed right where it occurred in the flow, not just referenced separately.
-- Add screenshot placeholders where relevant, plus all diagrams or images, and screenshots shared during the lab where it occurred. 
+- Add screenshot placeholders where relevant, plus all diagrams or images, and screenshots shared during the lab where it occurred. Same convention as the module: image first, then the text. All SVG or screenshot sit relative to their step headings as it is in the modules.
 - Redact any personal info or sensitive information.
 - Format like a reference guide I can return to with all scenarios where relevant
 - A table of contents at the top with jump links to every section, including each hands-on step
