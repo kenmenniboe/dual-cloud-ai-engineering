@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" width="980" height="560" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="980" height="560" fill="#ffffff"/>
+  <defs>
+    <marker id="sa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4a5568"/>
+    </marker>
+    <marker id="sr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#DD344C"/>
+    </marker>
+  </defs>
+
+  <text x="490" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#16191f">Snow Family — two device roles</text>
+  <text x="490" y="55" text-anchor="middle" font-size="12" fill="#5f6b7a">The decider is whether compute happens on the device, not how much data there is</text>
+
+  <!-- USE CASE 1 -->
+  <rect x="25" y="78" width="930" height="180" rx="8" fill="#f7f9fb" stroke="#879196" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="45" y="101" font-size="14" font-weight="bold" fill="#16191f">USE CASE 1 — Bulk migration</text>
+  <text x="45" y="119" font-size="11" fill="#5f6b7a">Snowball Edge Storage Optimized · ~210 TB · the device is a container for bytes</text>
+
+  <rect x="55" y="136" width="170" height="60" rx="5" fill="#ED7100"/>
+  <text x="140" y="160" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">On-premises</text>
+  <text x="140" y="176" text-anchor="middle" font-size="10" fill="#ffe3cc">data center</text>
+  <text x="140" y="190" text-anchor="middle" font-size="9" fill="#ffe3cc">petabytes to move</text>
+
+  <rect x="310" y="136" width="170" height="60" rx="5" fill="#E7157B"/>
+  <text x="395" y="160" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Snowball Edge</text>
+  <text x="395" y="176" text-anchor="middle" font-size="10" fill="#fbd6e8">Storage Optimized</text>
+  <text x="395" y="190" text-anchor="middle" font-size="9" fill="#fbd6e8">~210 TB</text>
+
+  <rect x="565" y="136" width="150" height="60" rx="5" fill="#7AA116"/>
+  <text x="640" y="163" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Amazon S3</text>
+  <text x="640" y="180" text-anchor="middle" font-size="9" fill="#eaf3d8">import lands here</text>
+
+  <rect x="795" y="136" width="150" height="60" rx="5" fill="#ffffff" stroke="#7AA116" stroke-width="1.5"/>
+  <text x="870" y="163" text-anchor="middle" font-size="12" font-weight="bold" fill="#5a7a10">S3 Glacier</text>
+  <text x="870" y="180" text-anchor="middle" font-size="9" fill="#5f6b7a">via lifecycle policy</text>
+
+  <line x1="228" y1="166" x2="306" y2="166" stroke="#4a5568" stroke-width="2" marker-end="url(#sa)"/>
+  <text x="267" y="158" text-anchor="middle" font-size="9" fill="#4a5568">copy locally</text>
+  <line x1="483" y1="166" x2="561" y2="166" stroke="#4a5568" stroke-width="2" marker-end="url(#sa)"/>
+  <text x="522" y="158" text-anchor="middle" font-size="9" fill="#4a5568">ship back</text>
+  <line x1="718" y1="166" x2="791" y2="166" stroke="#4a5568" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#sa)"/>
+  <text x="754" y="158" text-anchor="middle" font-size="9" fill="#4a5568">lifecycle</text>
+
+  <rect x="565" y="210" width="380" height="34" rx="4" fill="#fff5f5" stroke="#DD344C" stroke-width="1.3"/>
+  <text x="755" y="232" text-anchor="middle" font-size="10" font-weight="bold" fill="#c0263c">TRAP — Snowball cannot import directly into Glacier</text>
+
+  <!-- USE CASE 2 -->
+  <rect x="25" y="274" width="930" height="150" rx="8" fill="#f7f9fb" stroke="#879196" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="45" y="297" font-size="14" font-weight="bold" fill="#16191f">USE CASE 2 — Edge computing</text>
+  <text x="45" y="315" font-size="11" fill="#5f6b7a">Snowball Edge Compute Optimized · ~28 TB · runs EC2 and Lambda on the device itself</text>
+
+  <rect x="55" y="332" width="200" height="70" rx="5" fill="#ED7100"/>
+  <text x="155" y="356" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Remote site</text>
+  <text x="155" y="372" text-anchor="middle" font-size="9" fill="#ffe3cc">ship at sea, factory floor,</text>
+  <text x="155" y="385" text-anchor="middle" font-size="9" fill="#ffe3cc">no usable network link</text>
+
+  <rect x="330" y="332" width="230" height="70" rx="5" fill="#E7157B"/>
+  <text x="445" y="354" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Snowball Edge Compute Optimized</text>
+  <text x="445" y="371" text-anchor="middle" font-size="9" fill="#fbd6e8">EC2 instances + Lambda run HERE</text>
+  <text x="445" y="385" text-anchor="middle" font-size="9" fill="#fbd6e8">~28 TB</text>
+
+  <rect x="640" y="332" width="150" height="70" rx="5" fill="#ffffff" stroke="#879196" stroke-width="1.3"/>
+  <text x="715" y="356" text-anchor="middle" font-size="11" font-weight="bold" fill="#16191f">Results only</text>
+  <text x="715" y="374" text-anchor="middle" font-size="9" fill="#5f6b7a">processed output,</text>
+  <text x="715" y="387" text-anchor="middle" font-size="9" fill="#5f6b7a">not the raw data</text>
+
+  <rect x="850" y="332" width="95" height="70" rx="5" fill="#7AA116"/>
+  <text x="897" y="364" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Amazon</text>
+  <text x="897" y="379" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">S3</text>
+
+  <line x1="258" y1="367" x2="326" y2="367" stroke="#4a5568" stroke-width="2" marker-end="url(#sa)"/>
+  <text x="292" y="359" text-anchor="middle" font-size="9" fill="#4a5568">sensor data</text>
+  <line x1="563" y1="367" x2="636" y2="367" stroke="#4a5568" stroke-width="2" marker-end="url(#sa)"/>
+  <text x="600" y="359" text-anchor="middle" font-size="9" fill="#4a5568">inference</text>
+  <line x1="793" y1="367" x2="846" y2="367" stroke="#4a5568" stroke-width="2" marker-end="url(#sa)"/>
+
+  <!-- WHEN TO CHOOSE -->
+  <rect x="25" y="440" width="930" height="100" rx="8" fill="#fff8e6" stroke="#f0b429" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="45" y="463" font-size="13" font-weight="bold" fill="#9a6700">WHEN TO SHIP A DEVICE INSTEAD OF USING THE NETWORK</text>
+  <text x="45" y="487" font-size="12" font-weight="bold" fill="#16191f">Rule of thumb: if the transfer would take more than roughly a week over the available link, ship a device.</text>
+  <text x="45" y="509" font-size="11" fill="#5f6b7a">Also reach for Snow when the link is slow · shared with production traffic you cannot saturate · expensive (metered or per-GB) · unstable</text>
+  <text x="45" y="529" font-size="11" font-style="italic" fill="#5f6b7a">Otherwise, DataSync over the wire is the simpler answer.</text>
+</svg>

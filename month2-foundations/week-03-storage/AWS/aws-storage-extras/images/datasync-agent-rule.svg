@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" width="980" height="560" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="980" height="560" fill="#ffffff"/>
+  <defs>
+    <marker id="da" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4a5568"/>
+    </marker>
+  </defs>
+
+  <text x="490" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#16191f">AWS DataSync — when is an agent required?</text>
+  <text x="490" y="55" text-anchor="middle" font-size="12" fill="#5f6b7a">The agent bridges a NETWORK boundary, not an account or Region boundary</text>
+
+  <!-- NO AGENT -->
+  <rect x="25" y="78" width="930" height="140" rx="8" fill="#eef7e9" stroke="#7AA116" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="45" y="101" font-size="14" font-weight="bold" fill="#5a7a10">NO AGENT — both endpoints already inside AWS</text>
+
+  <rect x="80" y="118" width="200" height="60" rx="5" fill="#7AA116"/>
+  <text x="180" y="142" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Amazon S3 / EFS / FSx</text>
+  <text x="180" y="159" text-anchor="middle" font-size="9" fill="#eaf3d8">source location</text>
+
+  <rect x="400" y="118" width="180" height="60" rx="5" fill="#E7157B"/>
+  <text x="490" y="142" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">AWS DataSync</text>
+  <text x="490" y="159" text-anchor="middle" font-size="9" fill="#fbd6e8">task + execution</text>
+
+  <rect x="700" y="118" width="200" height="60" rx="5" fill="#7AA116"/>
+  <text x="800" y="142" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Amazon S3 / EFS / FSx</text>
+  <text x="800" y="159" text-anchor="middle" font-size="9" fill="#eaf3d8">destination location</text>
+
+  <line x1="283" y1="148" x2="396" y2="148" stroke="#4a5568" stroke-width="2" marker-end="url(#da)"/>
+  <line x1="583" y1="148" x2="696" y2="148" stroke="#4a5568" stroke-width="2" marker-end="url(#da)"/>
+
+  <text x="945" y="202" text-anchor="end" font-size="10" font-style="italic" fill="#5a7a10">Different accounts or Regions? Still no agent.</text>
+
+  <!-- AGENT -->
+  <rect x="25" y="234" width="930" height="150" rx="8" fill="#fff8e6" stroke="#f0b429" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="45" y="257" font-size="14" font-weight="bold" fill="#9a6700">AGENT REQUIRED — source is outside AWS</text>
+
+  <rect x="60" y="274" width="200" height="66" rx="5" fill="#ED7100"/>
+  <text x="160" y="297" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">On-premises or</text>
+  <text x="160" y="313" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">another cloud</text>
+  <text x="160" y="330" text-anchor="middle" font-size="9" fill="#ffe3cc">NFS · SMB · HDFS · object</text>
+
+  <rect x="320" y="274" width="180" height="66" rx="5" fill="#879196"/>
+  <text x="410" y="300" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">DataSync agent</text>
+  <text x="410" y="317" text-anchor="middle" font-size="9" fill="#e8ebed">VM in the data center</text>
+  <text x="410" y="331" text-anchor="middle" font-size="9" fill="#e8ebed">reads the source</text>
+
+  <rect x="560" y="274" width="170" height="66" rx="5" fill="#E7157B"/>
+  <text x="645" y="303" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">AWS DataSync</text>
+  <text x="645" y="321" text-anchor="middle" font-size="9" fill="#fbd6e8">service</text>
+
+  <rect x="790" y="274" width="145" height="66" rx="5" fill="#7AA116"/>
+  <text x="862" y="297" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">S3 / EFS / FSx</text>
+  <text x="862" y="314" text-anchor="middle" font-size="9" fill="#eaf3d8">including</text>
+  <text x="862" y="328" text-anchor="middle" font-size="9" fill="#eaf3d8">Glacier classes</text>
+
+  <line x1="263" y1="304" x2="316" y2="304" stroke="#4a5568" stroke-width="2" marker-end="url(#da)"/>
+  <line x1="503" y1="304" x2="556" y2="304" stroke="#4a5568" stroke-width="2" marker-end="url(#da)"/>
+  <text x="530" y="296" text-anchor="middle" font-size="8" fill="#4a5568">TLS</text>
+  <line x1="733" y1="304" x2="786" y2="304" stroke="#4a5568" stroke-width="2" marker-end="url(#da)"/>
+
+  <text x="45" y="368" font-size="10" fill="#5f6b7a">Scheduled hourly, daily or weekly — never continuous, so there is always some lag  ·  up to 10 Gbps per task with optional bandwidth throttling  ·  bidirectional</text>
+
+  <!-- GLACIER EXCEPTION -->
+  <rect x="25" y="400" width="455" height="90" rx="8" fill="#fff5f5" stroke="#DD344C" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="252" y="423" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0263c">THE GLACIER EXCEPTION</text>
+  <text x="252" y="445" text-anchor="middle" font-size="10" fill="#16191f">DataSync is the ONLY service in this track that</text>
+  <text x="252" y="460" text-anchor="middle" font-size="10" fill="#16191f">writes directly to Glacier storage classes.</text>
+  <text x="252" y="479" text-anchor="middle" font-size="9" font-style="italic" fill="#5f6b7a">Snowball and S3 File Gateway land in S3 first, then lifecycle.</text>
+
+  <!-- BOUNDARY -->
+  <rect x="500" y="400" width="455" height="90" rx="8" fill="#f7f9fb" stroke="#879196" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="727" y="423" text-anchor="middle" font-size="12" font-weight="bold" fill="#16191f">DataSync vs S3 File Gateway</text>
+  <text x="727" y="447" text-anchor="middle" font-size="10" fill="#5f6b7a"><tspan font-weight="bold" fill="#16191f">DataSync</tspan> = a scheduled copy job. It runs, finishes,</text>
+  <text x="727" y="461" text-anchor="middle" font-size="10" fill="#5f6b7a">and leaves a copy behind.</text>
+  <text x="727" y="479" text-anchor="middle" font-size="10" fill="#5f6b7a"><tspan font-weight="bold" fill="#16191f">S3 File Gateway</tspan> = a live share, always on.</text>
+
+  <!-- footer -->
+  <rect x="25" y="506" width="930" height="42" rx="6" fill="#f7f9fb" stroke="#879196" stroke-width="1.2"/>
+  <text x="45" y="524" font-size="10" font-weight="bold" fill="#16191f">Signature exam phrases</text>
+  <text x="45" y="540" font-size="10" fill="#5f6b7a">&quot;preserves permissions and metadata&quot;  ·  &quot;nightly sync where only a small percentage changes&quot; (incremental — compares name, size, timestamp)</text>
+</svg>

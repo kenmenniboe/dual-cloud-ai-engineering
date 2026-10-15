@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 540" width="980" height="540" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="980" height="540" fill="#ffffff"/>
+  <defs>
+    <marker id="ta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4a5568"/>
+    </marker>
+    <marker id="tb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#DD344C"/>
+    </marker>
+  </defs>
+
+  <text x="490" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#16191f">AWS Transfer Family — managed FTP / FTPS / SFTP into S3 or EFS</text>
+  <text x="490" y="55" text-anchor="middle" font-size="12" fill="#5f6b7a">Partners keep the client they already use; AWS runs the endpoint</text>
+
+  <!-- PRODUCERS -->
+  <rect x="25" y="78" width="250" height="190" rx="8" fill="#f7f9fb" stroke="#ED7100" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="150" y="101" text-anchor="middle" font-size="13" font-weight="bold" fill="#b35900">PRODUCERS</text>
+
+  <rect x="48" y="114" width="204" height="40" rx="5" fill="#ED7100"/>
+  <text x="150" y="131" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">SFTP client</text>
+  <text x="150" y="146" text-anchor="middle" font-size="9" fill="#ffe3cc">SSH File Transfer Protocol</text>
+
+  <rect x="48" y="162" width="204" height="40" rx="5" fill="#ED7100"/>
+  <text x="150" y="179" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">FTPS client</text>
+  <text x="150" y="194" text-anchor="middle" font-size="9" fill="#ffe3cc">FTP over TLS</text>
+
+  <rect x="48" y="210" width="204" height="44" rx="5" fill="#ffffff" stroke="#DD344C" stroke-width="1.4"/>
+  <text x="150" y="227" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0263c">FTP client</text>
+  <text x="150" y="243" text-anchor="middle" font-size="9" fill="#5f6b7a">unencrypted — VPC-only</text>
+
+  <!-- ENDPOINT -->
+  <rect x="325" y="78" width="280" height="190" rx="8" fill="#f7f9fb" stroke="#E7157B" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="465" y="101" text-anchor="middle" font-size="13" font-weight="bold" fill="#b01060">MANAGED ENDPOINT</text>
+
+  <rect x="348" y="114" width="234" height="60" rx="5" fill="#E7157B"/>
+  <text x="465" y="137" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">AWS Transfer Family</text>
+  <text x="465" y="154" text-anchor="middle" font-size="9" fill="#fbd6e8">billed per endpoint-HOUR</text>
+  <text x="465" y="167" text-anchor="middle" font-size="9" fill="#fbd6e8">plus per GB transferred</text>
+
+  <rect x="348" y="184" width="234" height="36" rx="4" fill="#ffffff" stroke="#E7157B" stroke-width="1.3"/>
+  <text x="465" y="200" text-anchor="middle" font-size="10" font-weight="bold" fill="#b01060">Amazon Route 53</text>
+  <text x="465" y="214" text-anchor="middle" font-size="9" fill="#5f6b7a">custom branded hostname</text>
+
+  <rect x="348" y="228" width="234" height="30" rx="4" fill="#ffffff" stroke="#879196" stroke-width="1.2"/>
+  <text x="465" y="248" text-anchor="middle" font-size="9" fill="#16191f">IAM role controls what each user reaches</text>
+
+  <!-- DESTINATIONS -->
+  <rect x="655" y="78" width="300" height="190" rx="8" fill="#f7f9fb" stroke="#7AA116" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="805" y="101" text-anchor="middle" font-size="13" font-weight="bold" fill="#5a7a10">DESTINATIONS</text>
+
+  <rect x="678" y="114" width="254" height="60" rx="5" fill="#7AA116"/>
+  <text x="805" y="137" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Amazon S3</text>
+  <text x="805" y="154" text-anchor="middle" font-size="9" fill="#eaf3d8">Lambda on upload · Athena · Glue</text>
+  <text x="805" y="167" text-anchor="middle" font-size="9" fill="#eaf3d8">lifecycle policies</text>
+
+  <rect x="678" y="186" width="254" height="60" rx="5" fill="#7AA116"/>
+  <text x="805" y="209" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Amazon EFS</text>
+  <text x="805" y="226" text-anchor="middle" font-size="9" fill="#eaf3d8">an application opens a file path</text>
+  <text x="805" y="239" text-anchor="middle" font-size="9" fill="#eaf3d8">and expects POSIX semantics</text>
+
+  <!-- arrows -->
+  <line x1="256" y1="152" x2="344" y2="152" stroke="#4a5568" stroke-width="2" marker-end="url(#ta)"/>
+  <text x="300" y="144" text-anchor="middle" font-size="9" font-weight="bold" fill="#4a5568">upload</text>
+  <line x1="585" y1="144" x2="674" y2="144" stroke="#4a5568" stroke-width="2" marker-end="url(#ta)"/>
+  <line x1="585" y1="196" x2="674" y2="212" stroke="#4a5568" stroke-width="2" marker-end="url(#ta)"/>
+
+  <!-- IDENTITY -->
+  <rect x="25" y="288" width="580" height="124" rx="8" fill="#f7f9fb" stroke="#DD344C" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="45" y="311" font-size="13" font-weight="bold" fill="#c0263c">IDENTITY PROVIDERS</text>
+
+  <rect x="45" y="326" width="165" height="32" rx="4" fill="#ffffff" stroke="#DD344C" stroke-width="1.2"/>
+  <text x="127" y="347" text-anchor="middle" font-size="9" fill="#16191f">Service-managed</text>
+
+  <rect x="222" y="326" width="165" height="32" rx="4" fill="#ffffff" stroke="#DD344C" stroke-width="1.2"/>
+  <text x="304" y="347" text-anchor="middle" font-size="9" fill="#16191f">AWS Directory Service / AD</text>
+
+  <rect x="399" y="326" width="165" height="32" rx="4" fill="#ffffff" stroke="#DD344C" stroke-width="1.2"/>
+  <text x="481" y="347" text-anchor="middle" font-size="9" fill="#16191f">LDAP</text>
+
+  <rect x="45" y="366" width="165" height="32" rx="4" fill="#ffffff" stroke="#DD344C" stroke-width="1.2"/>
+  <text x="127" y="387" text-anchor="middle" font-size="9" fill="#16191f">Okta</text>
+
+  <rect x="222" y="366" width="165" height="32" rx="4" fill="#ffffff" stroke="#DD344C" stroke-width="1.2"/>
+  <text x="304" y="387" text-anchor="middle" font-size="9" fill="#16191f">Amazon Cognito</text>
+
+  <rect x="399" y="366" width="165" height="32" rx="4" fill="#ffffff" stroke="#DD344C" stroke-width="1.2"/>
+  <text x="481" y="387" text-anchor="middle" font-size="9" fill="#16191f">Custom provider</text>
+
+  <!-- DECISION RULE -->
+  <rect x="625" y="288" width="330" height="124" rx="8" fill="#fff8e6" stroke="#f0b429" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="790" y="311" text-anchor="middle" font-size="12" font-weight="bold" fill="#9a6700">S3 OR EFS?</text>
+  <text x="790" y="334" text-anchor="middle" font-size="11" font-weight="bold" fill="#16191f">Ask who picks up the file next.</text>
+  <text x="790" y="356" text-anchor="middle" font-size="9" fill="#5f6b7a">Object-aware consumer (Lambda, Athena,</text>
+  <text x="790" y="369" text-anchor="middle" font-size="9" fill="#5f6b7a">Glue, lifecycle) → <tspan font-weight="bold" fill="#16191f">S3</tspan></text>
+  <text x="790" y="389" text-anchor="middle" font-size="9" fill="#5f6b7a">App that opens a file path → <tspan font-weight="bold" fill="#16191f">EFS</tspan></text>
+  <text x="790" y="404" text-anchor="middle" font-size="8" font-style="italic" fill="#879196">The partner's protocol does not decide this.</text>
+
+  <!-- AZURE -->
+  <rect x="25" y="432" width="930" height="84" rx="8" fill="#f5f8fc" stroke="#0078D4" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="45" y="455" font-size="12" font-weight="bold" fill="#005a9e">AZURE ANCHOR</text>
+  <text x="45" y="477" font-size="11" fill="#16191f">Azure Blob Storage native SFTP support</text>
+  <text x="45" y="497" font-size="10" font-style="italic" fill="#5f6b7a">Requires the hierarchical namespace to be enabled on the storage account — without it, SFTP is not available.</text>
+</svg>

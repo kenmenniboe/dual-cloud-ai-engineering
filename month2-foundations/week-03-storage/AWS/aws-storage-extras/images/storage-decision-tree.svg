@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1020" width="1000" height="1020" font-family="Helvetica, Arial, sans-serif">
+
+  <rect x="0" y="0" width="1000" height="1020" fill="#ffffff"/>
+
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4a5568"/>
+    </marker>
+  </defs>
+
+  <text x="500" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#16191f">AWS Storage Decision Tree</text>
+  <text x="500" y="58" text-anchor="middle" font-size="12" fill="#5f6b7a">Read in this order: protocol or interface → OS and workload → hybrid? → modifiers (cost, Multi-AZ, durability, latency, retention)</text>
+
+  <!-- ============ CLOUD-NATIVE ============ -->
+  <rect x="25" y="80" width="470" height="470" rx="8" fill="#f7f9fb" stroke="#879196" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="45" y="104" font-size="14" font-weight="bold" fill="#16191f">CLOUD-NATIVE STORAGE</text>
+  <text x="45" y="122" font-size="11" fill="#5f6b7a">Workload already runs in AWS</text>
+
+  <!-- Block -->
+  <rect x="45" y="136" width="200" height="130" rx="6" fill="none" stroke="#ED7100" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="145" y="156" text-anchor="middle" font-size="11" font-weight="bold" fill="#b35900">BLOCK — one instance</text>
+
+  <rect x="62" y="166" width="166" height="40" rx="5" fill="#ED7100"/>
+  <text x="145" y="183" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Amazon EBS</text>
+  <text x="145" y="197" text-anchor="middle" font-size="9" fill="#ffe3cc">persistent, survives stop</text>
+
+  <rect x="62" y="214" width="166" height="40" rx="5" fill="#ED7100"/>
+  <text x="145" y="231" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">EC2 Instance Store</text>
+  <text x="145" y="245" text-anchor="middle" font-size="9" fill="#ffe3cc">ephemeral, highest IOPS</text>
+
+  <!-- Object -->
+  <rect x="270" y="136" width="200" height="130" rx="6" fill="none" stroke="#7AA116" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="370" y="156" text-anchor="middle" font-size="11" font-weight="bold" fill="#5a7a10">OBJECT — HTTPS API</text>
+
+  <rect x="287" y="166" width="166" height="40" rx="5" fill="#7AA116"/>
+  <text x="370" y="183" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Amazon S3</text>
+  <text x="370" y="197" text-anchor="middle" font-size="9" fill="#eaf3d8">Standard / IA / Intelligent</text>
+
+  <rect x="287" y="214" width="166" height="40" rx="5" fill="#7AA116"/>
+  <text x="370" y="231" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">S3 Glacier</text>
+  <text x="370" y="245" text-anchor="middle" font-size="9" fill="#eaf3d8">archive, via lifecycle</text>
+
+  <!-- File -->
+  <rect x="45" y="282" width="425" height="252" rx="6" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="257" y="302" text-anchor="middle" font-size="11" font-weight="bold" fill="#6d28d9">FILE — shared by many clients</text>
+
+  <rect x="62" y="312" width="190" height="42" rx="5" fill="#8b5cf6"/>
+  <text x="157" y="329" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Amazon EFS</text>
+  <text x="157" y="343" text-anchor="middle" font-size="9" fill="#e5dbff">NFS, Linux, Multi-AZ</text>
+
+  <rect x="265" y="312" width="190" height="42" rx="5" fill="#8b5cf6"/>
+  <text x="360" y="329" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">FSx for Windows</text>
+  <text x="360" y="343" text-anchor="middle" font-size="9" fill="#e5dbff">SMB + NTFS + AD</text>
+
+  <rect x="62" y="362" width="190" height="42" rx="5" fill="#8b5cf6"/>
+  <text x="157" y="379" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">FSx for Lustre</text>
+  <text x="157" y="393" text-anchor="middle" font-size="9" fill="#e5dbff">HPC / ML, single-AZ only</text>
+
+  <rect x="265" y="362" width="190" height="42" rx="5" fill="#8b5cf6"/>
+  <text x="360" y="379" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">FSx for NetApp ONTAP</text>
+  <text x="360" y="393" text-anchor="middle" font-size="9" fill="#e5dbff">NFS+SMB+iSCSI, broadest OS</text>
+
+  <rect x="62" y="412" width="190" height="42" rx="5" fill="#8b5cf6"/>
+  <text x="157" y="429" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">FSx for OpenZFS</text>
+  <text x="157" y="443" text-anchor="middle" font-size="9" fill="#e5dbff">NFS only, 1M IOPS</text>
+
+  <rect x="265" y="412" width="190" height="42" rx="5" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.3"/>
+  <text x="360" y="429" text-anchor="middle" font-size="10" font-weight="bold" fill="#6d28d9">Deciding between FSx?</text>
+  <text x="360" y="443" text-anchor="middle" font-size="9" fill="#5f6b7a">Protocol first, then OS</text>
+
+  <rect x="62" y="464" width="393" height="58" rx="5" fill="#fff8e6" stroke="#f0b429" stroke-width="1.3"/>
+  <text x="258" y="482" text-anchor="middle" font-size="10" font-weight="bold" fill="#9a6700">Lustre deployment options</text>
+  <text x="258" y="498" text-anchor="middle" font-size="9" fill="#5f6b7a">Scratch — 1 copy, no replication, 6x burst, short-term, cheapest</text>
+  <text x="258" y="513" text-anchor="middle" font-size="9" fill="#5f6b7a">Persistent — replicated within the SAME AZ, self-heals in minutes</text>
+
+  <!-- ============ HYBRID ============ -->
+  <rect x="520" y="80" width="455" height="470" rx="8" fill="#f7f9fb" stroke="#879196" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="540" y="104" font-size="14" font-weight="bold" fill="#16191f">HYBRID — ON-PREMISES INVOLVED</text>
+  <text x="540" y="122" font-size="11" fill="#5f6b7a">Data or clients live outside AWS</text>
+
+  <!-- Live access -->
+  <rect x="540" y="136" width="415" height="180" rx="6" fill="none" stroke="#7AA116" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="747" y="156" text-anchor="middle" font-size="11" font-weight="bold" fill="#5a7a10">LIVE ACCESS — Storage Gateway</text>
+
+  <rect x="557" y="166" width="190" height="44" rx="5" fill="#7AA116"/>
+  <text x="652" y="183" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">S3 File Gateway</text>
+  <text x="652" y="197" text-anchor="middle" font-size="9" fill="#eaf3d8">NFS / SMB → S3 objects</text>
+
+  <rect x="760" y="166" width="180" height="44" rx="5" fill="#7AA116"/>
+  <text x="850" y="183" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Volume Gateway</text>
+  <text x="850" y="197" text-anchor="middle" font-size="9" fill="#eaf3d8">iSCSI block + snapshots</text>
+
+  <rect x="557" y="220" width="190" height="44" rx="5" fill="#7AA116"/>
+  <text x="652" y="237" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Tape Gateway</text>
+  <text x="652" y="251" text-anchor="middle" font-size="9" fill="#eaf3d8">iSCSI VTL → S3 / Glacier</text>
+
+  <rect x="760" y="220" width="180" height="44" rx="5" fill="#eceff1" stroke="#879196" stroke-width="1.2"/>
+  <text x="850" y="237" text-anchor="middle" font-size="11" font-weight="bold" fill="#879196">FSx File Gateway</text>
+  <text x="850" y="251" text-anchor="middle" font-size="9" fill="#879196">closed to new customers</text>
+
+  <text x="747" y="285" text-anchor="middle" font-size="9" fill="#5f6b7a">Cached volumes = primary in S3 + local hot cache</text>
+  <text x="747" y="300" text-anchor="middle" font-size="9" fill="#5f6b7a">Stored volumes = full dataset on-prem, async backup to S3</text>
+
+  <!-- Transfer -->
+  <rect x="540" y="330" width="415" height="204" rx="6" fill="none" stroke="#E7157B" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="747" y="350" text-anchor="middle" font-size="11" font-weight="bold" fill="#b01060">MOVING DATA IN</text>
+
+  <rect x="557" y="360" width="190" height="50" rx="5" fill="#E7157B"/>
+  <text x="652" y="377" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">AWS DataSync</text>
+  <text x="652" y="391" text-anchor="middle" font-size="9" fill="#fbd6e8">scheduled copy job</text>
+  <text x="652" y="403" text-anchor="middle" font-size="9" fill="#fbd6e8">agent only if outside AWS</text>
+
+  <rect x="760" y="360" width="180" height="50" rx="5" fill="#E7157B"/>
+  <text x="850" y="377" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Snow Family</text>
+  <text x="850" y="391" text-anchor="middle" font-size="9" fill="#fbd6e8">physical shipping</text>
+  <text x="850" y="403" text-anchor="middle" font-size="9" fill="#fbd6e8">&gt; ~1 week over the wire</text>
+
+  <rect x="557" y="420" width="383" height="50" rx="5" fill="#E7157B"/>
+  <text x="748" y="437" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">AWS Transfer Family</text>
+  <text x="748" y="451" text-anchor="middle" font-size="9" fill="#fbd6e8">managed FTP / FTPS / SFTP endpoint into S3 or EFS</text>
+  <text x="748" y="463" text-anchor="middle" font-size="9" fill="#fbd6e8">partners keep their existing client</text>
+
+  <rect x="557" y="480" width="383" height="44" rx="5" fill="#fff8e6" stroke="#f0b429" stroke-width="1.3"/>
+  <text x="748" y="497" text-anchor="middle" font-size="10" font-weight="bold" fill="#9a6700">DataSync vs S3 File Gateway</text>
+  <text x="748" y="513" text-anchor="middle" font-size="9" fill="#5f6b7a">Scheduled copy job  vs  live share backed by S3</text>
+
+  <!-- ============ TRAPS ============ -->
+  <rect x="25" y="572" width="950" height="150" rx="8" fill="#fff5f5" stroke="#DD344C" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="45" y="596" font-size="14" font-weight="bold" fill="#c0263c">THREE RECURRING EXAM TRAPS</text>
+
+  <rect x="45" y="610" width="295" height="94" rx="5" fill="#ffffff" stroke="#DD344C" stroke-width="1.2"/>
+  <text x="192" y="631" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0263c">1 · Glacier is not a target</text>
+  <text x="192" y="650" text-anchor="middle" font-size="9" fill="#5f6b7a">Snowball and S3 File Gateway land</text>
+  <text x="192" y="664" text-anchor="middle" font-size="9" fill="#5f6b7a">in S3 first, then lifecycle to Glacier.</text>
+  <text x="192" y="684" text-anchor="middle" font-size="9" font-weight="bold" fill="#16191f">DataSync is the only exception —</text>
+  <text x="192" y="697" text-anchor="middle" font-size="9" font-weight="bold" fill="#16191f">it writes to Glacier classes directly.</text>
+
+  <rect x="352" y="610" width="295" height="94" rx="5" fill="#ffffff" stroke="#DD344C" stroke-width="1.2"/>
+  <text x="500" y="631" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0263c">2 · Lustre is always single-AZ</text>
+  <text x="500" y="650" text-anchor="middle" font-size="9" fill="#5f6b7a">Scratch keeps one copy.</text>
+  <text x="500" y="664" text-anchor="middle" font-size="9" fill="#5f6b7a">Persistent replicates — but only</text>
+  <text x="500" y="678" text-anchor="middle" font-size="9" fill="#5f6b7a">within the same AZ, never across.</text>
+  <text x="500" y="697" text-anchor="middle" font-size="9" font-weight="bold" fill="#16191f">No Multi-AZ option exists.</text>
+
+  <rect x="659" y="610" width="296" height="94" rx="5" fill="#ffffff" stroke="#DD344C" stroke-width="1.2"/>
+  <text x="807" y="631" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0263c">3 · Linux can mount FSx Windows</text>
+  <text x="807" y="650" text-anchor="middle" font-size="9" fill="#5f6b7a">Linux EC2 mounts it over SMB —</text>
+  <text x="807" y="664" text-anchor="middle" font-size="9" fill="#5f6b7a">&quot;Linux&quot; alone does not rule it out.</text>
+  <text x="807" y="684" text-anchor="middle" font-size="9" font-weight="bold" fill="#16191f">But it still cannot get iSCSI there —</text>
+  <text x="807" y="697" text-anchor="middle" font-size="9" font-weight="bold" fill="#16191f">that needs ONTAP or Volume Gateway.</text>
+
+  <!-- ============ AZURE ============ -->
+  <rect x="25" y="744" width="950" height="196" rx="8" fill="#f5f8fc" stroke="#0078D4" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="45" y="768" font-size="14" font-weight="bold" fill="#005a9e">AZURE ANCHORS</text>
+
+  <line x1="45" y1="780" x2="955" y2="780" stroke="#c7d6e5" stroke-width="1"/>
+  <text x="60" y="798" font-size="10" font-weight="bold" fill="#005a9e">AWS service</text>
+  <text x="400" y="798" font-size="10" font-weight="bold" fill="#005a9e">Azure equivalent</text>
+  <text x="700" y="798" font-size="10" font-weight="bold" fill="#005a9e">Note</text>
+  <line x1="45" y1="806" x2="955" y2="806" stroke="#c7d6e5" stroke-width="1"/>
+
+  <text x="60" y="824" font-size="10" fill="#16191f">FSx for Windows File Server</text>
+  <text x="400" y="824" font-size="10" fill="#16191f">Azure Files + AD DS</text>
+  <text x="700" y="824" font-size="9" fill="#5f6b7a">Entra ID is not Entra Domain Services</text>
+
+  <text x="60" y="844" font-size="10" fill="#16191f">FSx for Lustre</text>
+  <text x="400" y="844" font-size="10" fill="#16191f">Azure Managed Lustre</text>
+  <text x="700" y="844" font-size="9" fill="#5f6b7a">same HPC / ML positioning</text>
+
+  <text x="60" y="864" font-size="10" fill="#16191f">FSx for NetApp ONTAP</text>
+  <text x="400" y="864" font-size="10" fill="#16191f">Azure NetApp Files</text>
+  <text x="700" y="864" font-size="9" fill="#5f6b7a">same vendor, same lift-and-shift role</text>
+
+  <text x="60" y="884" font-size="10" fill="#16191f">S3 File Gateway</text>
+  <text x="400" y="884" font-size="10" fill="#16191f">Azure File Sync</text>
+  <text x="700" y="884" font-size="9" fill="#5f6b7a">StorSimple has been retired</text>
+
+  <text x="60" y="904" font-size="10" fill="#16191f">Transfer Family</text>
+  <text x="400" y="904" font-size="10" fill="#16191f">Blob Storage native SFTP</text>
+  <text x="700" y="904" font-size="9" fill="#5f6b7a">needs hierarchical namespace enabled</text>
+
+  <text x="60" y="924" font-size="10" fill="#16191f">Snow Family</text>
+  <text x="400" y="924" font-size="10" fill="#16191f">Azure Data Box / Stack Edge</text>
+  <text x="700" y="924" font-size="9" fill="#5f6b7a">Data Box = bulk, Stack Edge = edge compute</text>
+
+  <!-- Legend -->
+  <text x="45" y="972" font-size="10" font-weight="bold" fill="#16191f">Legend</text>
+  <rect x="105" y="962" width="13" height="13" rx="2" fill="#ED7100"/>
+  <text x="124" y="972" font-size="9" fill="#5f6b7a">Block</text>
+  <rect x="168" y="962" width="13" height="13" rx="2" fill="#7AA116"/>
+  <text x="187" y="972" font-size="9" fill="#5f6b7a">Object / Hybrid</text>
+  <rect x="268" y="962" width="13" height="13" rx="2" fill="#8b5cf6"/>
+  <text x="287" y="972" font-size="9" fill="#5f6b7a">File</text>
+  <rect x="325" y="962" width="13" height="13" rx="2" fill="#E7157B"/>
+  <text x="344" y="972" font-size="9" fill="#5f6b7a">Migration &amp; Transfer</text>
+  <rect x="465" y="962" width="13" height="13" rx="2" fill="#ffffff" stroke="#DD344C" stroke-width="1.3"/>
+  <text x="484" y="972" font-size="9" fill="#5f6b7a">Exam trap</text>
+
+  <text x="500" y="1000" text-anchor="middle" font-size="9" font-style="italic" fill="#879196">When one clue fits two services, keep reading — the extra requirement is the decider.</text>
+
+</svg>
