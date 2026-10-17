@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="304" viewBox="0 0 950 304" font-family="Arial, Helvetica, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#232F3E"/></marker></defs>
+<rect width="950" height="304" fill="#FFFFFF"/>
+<text x="20" y="30" font-size="18" font-weight="bold" fill="#232F3E">Module 9: API Gateway integrations</text>
+<rect x="20" y="60" width="210" height="198" rx="8" fill="none" stroke="#7D8998" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="125.0" y="52" font-size="13" font-weight="bold" text-anchor="middle" fill="#232F3E">Clients</text>
+<rect x="32" y="74" width="40" height="40" rx="6" fill="#545B64"/>
+<text x="52" y="99" font-size="12" font-weight="bold" text-anchor="middle" fill="#FFFFFF">WEB</text>
+<text x="82" y="94.0" font-size="12.5" fill="#232F3E" dominant-baseline="middle">Web / mobile</text>
+<rect x="370" y="60" width="210" height="198" rx="8" fill="none" stroke="#7D8998" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="475.0" y="52" font-size="13" font-weight="bold" text-anchor="middle" fill="#232F3E">API Gateway</text>
+<rect x="382" y="74" width="40" height="40" rx="6" fill="#E7157B"/>
+<text x="402" y="99" font-size="12" font-weight="bold" text-anchor="middle" fill="#FFFFFF">APIG</text>
+<text x="432" y="86.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">Edge / Regional</text>
+<text x="432" y="101.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">/ Private</text>
+<rect x="382" y="132" width="40" height="40" rx="6" fill="#DD344C"/>
+<text x="402" y="157" font-size="12" font-weight="bold" text-anchor="middle" fill="#FFFFFF">AUTH</text>
+<text x="432" y="144.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">Auth: IAM, Cognito,</text>
+<text x="432" y="159.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">Lambda authorizer</text>
+<rect x="720" y="60" width="210" height="198" rx="8" fill="none" stroke="#7D8998" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="825.0" y="52" font-size="13" font-weight="bold" text-anchor="middle" fill="#232F3E">Backends</text>
+<rect x="732" y="74" width="40" height="40" rx="6" fill="#ED7100"/>
+<text x="752" y="99" font-size="12" font-weight="bold" text-anchor="middle" fill="#FFFFFF">λ</text>
+<text x="782" y="94.0" font-size="12.5" fill="#232F3E" dominant-baseline="middle">Lambda</text>
+<rect x="732" y="132" width="40" height="40" rx="6" fill="#8C4FFF"/>
+<text x="752" y="157" font-size="12" font-weight="bold" text-anchor="middle" fill="#FFFFFF">HTTP</text>
+<text x="782" y="152.0" font-size="12.5" fill="#232F3E" dominant-baseline="middle">HTTP endpoint</text>
+<rect x="732" y="190" width="40" height="40" rx="6" fill="#E7157B"/>
+<text x="752" y="215" font-size="12" font-weight="bold" text-anchor="middle" fill="#FFFFFF">AWS</text>
+<text x="782" y="202.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">AWS service</text>
+<text x="782" y="217.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">(SQS, Kinesis)</text>
+<line x1="234" y1="159.0" x2="364" y2="159.0" stroke="#232F3E" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="299.0" y="149.0" font-size="11.5" text-anchor="middle" fill="#232F3E">HTTPS</text>
+<line x1="584" y1="159.0" x2="714" y2="159.0" stroke="#232F3E" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="649.0" y="136.0" font-size="11.5" text-anchor="middle" fill="#232F3E">29 s</text>
+<text x="649.0" y="149.0" font-size="11.5" text-anchor="middle" fill="#232F3E">timeout</text>
+</svg>

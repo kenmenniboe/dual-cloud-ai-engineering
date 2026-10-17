@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="246" viewBox="0 0 950 246" font-family="Arial, Helvetica, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#232F3E"/></marker></defs>
+<rect width="950" height="246" fill="#FFFFFF"/>
+<text x="20" y="30" font-size="18" font-weight="bold" fill="#232F3E">Module 5B: Two lanes out of RDS</text>
+<rect x="20" y="60" width="210" height="140" rx="8" fill="none" stroke="#7D8998" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="125.0" y="52" font-size="13" font-weight="bold" text-anchor="middle" fill="#232F3E">Source</text>
+<rect x="32" y="74" width="40" height="40" rx="6" fill="#2E73B8"/>
+<text x="52" y="99" font-size="12" font-weight="bold" text-anchor="middle" fill="#FFFFFF">RDS</text>
+<text x="82" y="86.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">RDS PostgreSQL /</text>
+<text x="82" y="101.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">Aurora MySQL</text>
+<rect x="370" y="60" width="210" height="140" rx="8" fill="none" stroke="#7D8998" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="475.0" y="52" font-size="13" font-weight="bold" text-anchor="middle" fill="#232F3E">Two lanes</text>
+<rect x="382" y="74" width="40" height="40" rx="6" fill="#ED7100"/>
+<text x="402" y="99" font-size="12" font-weight="bold" text-anchor="middle" fill="#FFFFFF">λ</text>
+<text x="432" y="86.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">Invoke Lambda</text>
+<text x="432" y="101.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">from SQL</text>
+<rect x="382" y="132" width="40" height="40" rx="6" fill="#E7157B"/>
+<text x="402" y="157" font-size="12" font-weight="bold" text-anchor="middle" fill="#FFFFFF">EVT</text>
+<text x="432" y="144.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">RDS event</text>
+<text x="432" y="159.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">notifications</text>
+<rect x="720" y="60" width="210" height="140" rx="8" fill="none" stroke="#7D8998" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="825.0" y="52" font-size="13" font-weight="bold" text-anchor="middle" fill="#232F3E">Destinations</text>
+<rect x="732" y="74" width="40" height="40" rx="6" fill="#ED7100"/>
+<text x="752" y="99" font-size="12" font-weight="bold" text-anchor="middle" fill="#FFFFFF">λ</text>
+<text x="782" y="86.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">Your code acts</text>
+<text x="782" y="101.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">on table data</text>
+<rect x="732" y="132" width="40" height="40" rx="6" fill="#E7157B"/>
+<text x="752" y="157" font-size="12" font-weight="bold" text-anchor="middle" fill="#FFFFFF">SNS</text>
+<text x="782" y="144.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">SNS / EventBridge</text>
+<text x="782" y="159.5" font-size="12.5" fill="#232F3E" dominant-baseline="middle">(no table data)</text>
+<line x1="234" y1="130.0" x2="364" y2="130.0" stroke="#232F3E" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="299.0" y="107.0" font-size="11.5" text-anchor="middle" fill="#232F3E">data events /</text>
+<text x="299.0" y="120.0" font-size="11.5" text-anchor="middle" fill="#232F3E">instance events</text>
+<line x1="584" y1="130.0" x2="714" y2="130.0" stroke="#232F3E" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="649.0" y="120.0" font-size="11.5" text-anchor="middle" fill="#232F3E">deliver</text>
+</svg>
