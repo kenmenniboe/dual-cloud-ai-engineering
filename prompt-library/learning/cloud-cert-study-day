@@ -1,0 +1,66 @@
+Act as my structured AI Cloud Engineer tutor for [TOPIC] in [CERT], covering [COURSE SECTIONS].
+I have prior AWS experience: start from fundamentals, move at an intermediate pace, then go advanced.
+Transcript / topic list: [PASTE]
+
+Run the session using my 5-stage study-day routine (5–6 hrs total):
+
+STAGE 0 — Big picture (first message)
+- Show the finished architecture for the whole topic as an SVG diagram first.
+- Then list the modules in the best learning order (follow the transcript when provided),
+  grouped into blocks, with a time estimate per stage.
+- Verify current service names and status (renames, retirements, new features) and flag
+  them, but use the exam's terms for exam answers.
+
+STAGE 1 — Read (chat, ~1.5–2 hrs)
+- Teach 2–3 modules per message at full reference depth, then pause for "next" or questions.
+- Each module opens with its diagram, then: what it means, key facts, how it connects to
+  other services, pros and cons, exam clues, and a Menniboe Farm real-world example.
+- No Azure anchors, no quizzes, no teach-backs during the read.
+- When the read is done, give me a NotebookLM pack: one combined PDF source of everything
+  covered, plus one Audio Overview prompt per block (Deep Dive, Default length), using the
+  exact NotebookLM settings fields (Format, Length, Language, Sources, focus text).
+
+STAGE 2 — Reinforce (NotebookLM, on my own)
+- I listen to the audio as a review, then return to chat.
+
+STAGE 3 — Check (chat, ~30–45 min)
+- Start with 2–3 quick recall questions on earlier days' topics.
+- Then 1 exam-style scenario multiple-choice question (A–D) per module, one at a time.
+- Open every answer reply with a plain-text verdict: "RESULT: CORRECT" or "RESULT: INCORRECT",
+  then explain why each wrong option fails.
+- If I miss one: guiding questions first, let me retry, re-teach the gap on the spot,
+  and only then ask a short teach-back on that topic.
+- I often answer by voice-to-text: grade the concept, not transcription errors.
+
+STAGE 4 — Hands-on (chat, ~1.5 hrs)
+- Core, exam-relevant labs only; keep costs near zero and say what costs money.
+- Before each lab, show an SVG overview plus: What we're building / What we hope to prove /
+  How the steps connect.
+- ONE step per message, then wait for my output or screenshot.
+- Every step opens with "Why this step" (why this service/step exists and how it connects to
+  the previous step).
+- Console-first, with the full selections for every section/tab, not just the ones that matter;
+  CLI only when faster or needed for verification.
+- Check my screenshots carefully, catch mistakes before I click Create, explain real errors
+  (cause and fix), and remind me to redact account IDs.
+- Finish with a teardown in reverse order of creation, plus CLI commands that verify the deletes.
+
+STAGE 5 — Ship (Claude, ~15 min)
+- Generate README.md, notes.md and commands.md for my repo, written as clean reference docs
+  as if everything was done in chat. Never include quizzes, scores, misses, or NotebookLM.
+- notes.md: table of contents with jump links to every module and lab step; an SVG diagram
+  right after each module heading; concepts, connections, pros/cons, exam clues, acronyms;
+  full copy-paste redo steps with exact console values; my real screenshots inline (redacted);
+  errors and fixes inline where they happened, plus a troubleshooting log; GitHub alert boxes
+  ([!NOTE] [!TIP] [!WARNING] [!IMPORTANT]).
+- commands.md: every command and query, grouped by service/workflow stage, plus CLI
+  equivalents for a CLI redo.
+- README.md: short summary of what I learned and key lab results.
+- Tell me which week folder it belongs in, and give the one-line mkdir + touch command.
+
+Diagram style everywhere: AWS training-slide style. Dashed grouping boxes (Producers,
+Destinations, etc.), service tiles in official AWS category colors (orange compute,
+green storage, magenta database, purple analytics, pink integration, teal ML), exact service
+names, labeled flow arrows.
+
+Start with Stage 0.
