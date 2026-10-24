@@ -1,0 +1,103 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='720' height='776' viewBox='0 0 720 776'>
+<defs><marker id='ah' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M1,1 L9,5 L1,9 Z' fill='#545B64'/></marker></defs>
+<rect width='100%' height='100%' fill='#ffffff'/>
+<text x='24' y='34' font-family='Helvetica, Arial, sans-serif' font-size='16' font-weight='bold' fill='#232F3E'>Day 3 big picture: observe, audit, govern</text>
+<rect x='32.0' y='58' width='188' height='354' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='126.0' y='80' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>Sources</text>
+<rect x='266.0' y='58' width='188' height='354' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='360.0' y='80' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>Observe and audit</text>
+<rect x='500.0' y='58' width='188' height='354' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='594.0' y='80' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>React and store</text>
+<rect x='32.0' y='452' width='188' height='250' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='126.0' y='474' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>Management account</text>
+<rect x='266.0' y='452' width='188' height='250' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='360.0' y='474' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>Member accounts</text>
+<rect x='500.0' y='452' width='188' height='250' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='594.0' y='474' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>Identity</text>
+<path d='M156.0,122 L330.0,122' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<path d='M156.0,226 L330.0,226' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<path d='M156.0,330 L330.0,330' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<path d='M390.0,122 L564.0,122' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<text x='477.0' y='115' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#16191F' paint-order='stroke' stroke='#ffffff' stroke-width='4'>alarm</text>
+<path d='M390.0,226 L564.0,226' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<text x='477.0' y='219' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#16191F' paint-order='stroke' stroke='#ffffff' stroke-width='4'>API event</text>
+<path d='M390.0,330 L564.0,330' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<text x='477.0' y='323' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#16191F' paint-order='stroke' stroke='#ffffff' stroke-width='4'>history</text>
+<path d='M156.0,516 L330.0,516' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<text x='243.0' y='509' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#16191F' paint-order='stroke' stroke='#ffffff' stroke-width='4'>SCPs</text>
+<path d='M156.0,620 L330.0,620' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<text x='243.0' y='613' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#16191F' paint-order='stroke' stroke='#ffffff' stroke-width='4'>controls</text>
+<path d='M564.0,516 L390.0,516' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<text x='477.0' y='509' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#16191F' paint-order='stroke' stroke='#ffffff' stroke-width='4'>SSO</text>
+<path d='M594.0,596 L594.0,580' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<rect x='104.0' y='100' width='44' height='44' rx='6' fill='#ED7100'/>
+<text x='126.0' y='127' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>EC2</text>
+<text x='126.0' y='160' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Amazon EC2</text>
+<text x='126.0' y='176' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Metrics, logs</text>
+<rect x='104.0' y='204' width='44' height='44' rx='6' fill='#7D8998'/>
+<text x='126.0' y='231' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>API</text>
+<text x='126.0' y='264' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>API calls</text>
+<text x='126.0' y='280' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Users, apps</text>
+<rect x='104.0' y='308' width='44' height='44' rx='6' fill='#7D8998'/>
+<text x='126.0' y='335' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>RES</text>
+<text x='126.0' y='368' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>AWS resources</text>
+<text x='126.0' y='384' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Config changes</text>
+<rect x='338.0' y='100' width='44' height='44' rx='6' fill='#E7157B'/>
+<text x='360.0' y='127' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>CW</text>
+<text x='360.0' y='160' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Amazon CloudWatch</text>
+<text x='360.0' y='176' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Metrics, logs, alarms</text>
+<rect x='338.0' y='204' width='44' height='44' rx='6' fill='#E7157B'/>
+<text x='360.0' y='231' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>CT</text>
+<text x='360.0' y='264' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>AWS CloudTrail</text>
+<text x='360.0' y='280' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Who did what</text>
+<rect x='338.0' y='308' width='44' height='44' rx='6' fill='#E7157B'/>
+<text x='360.0' y='335' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>CFG</text>
+<text x='360.0' y='368' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>AWS Config</text>
+<text x='360.0' y='384' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Compliance</text>
+<rect x='572.0' y='100' width='44' height='44' rx='6' fill='#E7157B'/>
+<text x='594.0' y='127' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>SNS</text>
+<text x='594.0' y='160' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Amazon SNS</text>
+<text x='594.0' y='176' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Notify</text>
+<rect x='572.0' y='204' width='44' height='44' rx='6' fill='#E7157B'/>
+<text x='594.0' y='231' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>EB</text>
+<text x='594.0' y='264' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Amazon EventBridge</text>
+<text x='594.0' y='280' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Rules, schedules</text>
+<rect x='572.0' y='308' width='44' height='44' rx='6' fill='#7AA116'/>
+<text x='594.0' y='335' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>S3</text>
+<text x='594.0' y='368' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Amazon S3</text>
+<text x='594.0' y='384' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Log archive</text>
+<rect x='104.0' y='494' width='44' height='44' rx='6' fill='#E7157B'/>
+<text x='126.0' y='521' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>ORG</text>
+<text x='126.0' y='554' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>AWS Organizations</text>
+<text x='126.0' y='570' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>OUs, SCPs</text>
+<rect x='104.0' y='598' width='44' height='44' rx='6' fill='#E7157B'/>
+<text x='126.0' y='625' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>CTW</text>
+<text x='126.0' y='658' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>AWS Control Tower</text>
+<text x='126.0' y='674' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Landing zone</text>
+<rect x='338.0' y='494' width='44' height='44' rx='6' fill='#7D8998'/>
+<text x='360.0' y='521' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>OU</text>
+<text x='360.0' y='554' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Dev / Prod OUs</text>
+<text x='360.0' y='570' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>SCP guardrails</text>
+<rect x='338.0' y='598' width='44' height='44' rx='6' fill='#DD344C'/>
+<text x='360.0' y='625' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>IAM</text>
+<text x='360.0' y='658' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>IAM + boundaries</text>
+<text x='360.0' y='674' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Per-identity max</text>
+<rect x='572.0' y='494' width='44' height='44' rx='6' fill='#DD344C'/>
+<text x='594.0' y='521' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>IDC</text>
+<text x='594.0' y='554' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>IAM Identity Center</text>
+<text x='594.0' y='570' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>SSO</text>
+<rect x='572.0' y='598' width='44' height='44' rx='6' fill='#DD344C'/>
+<text x='594.0' y='625' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>DS</text>
+<text x='594.0' y='658' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Directory Service</text>
+<text x='594.0' y='674' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Managed AD</text>
+<rect x='24' y='746' width='12' height='12' rx='2' fill='#ED7100'/>
+<text x='41' y='756' font-family='Helvetica, Arial, sans-serif' font-size='11.5' fill='#16191F'>Compute</text>
+<rect x='100.19999999999999' y='746' width='12' height='12' rx='2' fill='#7AA116'/>
+<text x='117.19999999999999' y='756' font-family='Helvetica, Arial, sans-serif' font-size='11.5' fill='#16191F'>Storage</text>
+<rect x='176.39999999999998' y='746' width='12' height='12' rx='2' fill='#E7157B'/>
+<text x='193.39999999999998' y='756' font-family='Helvetica, Arial, sans-serif' font-size='11.5' fill='#16191F'>Management / integration</text>
+<rect x='364.79999999999995' y='746' width='12' height='12' rx='2' fill='#DD344C'/>
+<text x='381.79999999999995' y='756' font-family='Helvetica, Arial, sans-serif' font-size='11.5' fill='#16191F'>Security, identity</text>
+<rect x='513.5999999999999' y='746' width='12' height='12' rx='2' fill='#7D8998'/>
+<text x='530.5999999999999' y='756' font-family='Helvetica, Arial, sans-serif' font-size='11.5' fill='#16191F'>Generic / actor</text>
+</svg>

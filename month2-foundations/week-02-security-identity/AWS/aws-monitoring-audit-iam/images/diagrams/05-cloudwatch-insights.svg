@@ -1,0 +1,73 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='720' height='590' viewBox='0 0 720 590'>
+<defs><marker id='ah' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M1,1 L9,5 L1,9 Z' fill='#545B64'/></marker></defs>
+<rect width='100%' height='100%' fill='#ffffff'/>
+<text x='24' y='34' font-family='Helvetica, Arial, sans-serif' font-size='16' font-weight='bold' fill='#232F3E'>Module 5: CloudWatch Insights family</text>
+<rect x='32.0' y='58' width='188' height='458' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='126.0' y='80' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>Workloads</text>
+<rect x='266.0' y='58' width='188' height='458' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='360.0' y='80' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>Insights feature</text>
+<rect x='500.0' y='58' width='188' height='458' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='594.0' y='80' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>What you see</text>
+<path d='M156.0,122 L330.0,122' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<path d='M156.0,226 L330.0,226' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<path d='M156.0,330 L330.0,330' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<path d='M156.0,434 L330.0,434' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<path d='M390.0,122 L564.0,122' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<path d='M390.0,226 L564.0,226' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<path d='M390.0,330 L564.0,330' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<path d='M390.0,434 L564.0,434' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<rect x='104.0' y='100' width='44' height='44' rx='6' fill='#ED7100'/>
+<text x='126.0' y='127' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>ECS</text>
+<text x='126.0' y='160' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>ECS / EKS</text>
+<text x='126.0' y='176' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Containers</text>
+<rect x='104.0' y='204' width='44' height='44' rx='6' fill='#ED7100'/>
+<text x='126.0' y='231' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>λ</text>
+<text x='126.0' y='264' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>AWS Lambda</text>
+<text x='126.0' y='280' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Functions</text>
+<rect x='104.0' y='308' width='44' height='44' rx='6' fill='#7D8998'/>
+<text x='126.0' y='335' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>VPC</text>
+<text x='126.0' y='368' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>VPC Flow Logs</text>
+<text x='126.0' y='384' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Any log group</text>
+<rect x='104.0' y='412' width='44' height='44' rx='6' fill='#ED7100'/>
+<text x='126.0' y='439' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>APP</text>
+<text x='126.0' y='472' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>EC2 apps</text>
+<text x='126.0' y='488' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Java, .NET, SQL</text>
+<rect x='338.0' y='100' width='44' height='44' rx='6' fill='#E7157B'/>
+<text x='360.0' y='127' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>CI</text>
+<text x='360.0' y='160' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Container Insights</text>
+<text x='360.0' y='176' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Containerized agent</text>
+<rect x='338.0' y='204' width='44' height='44' rx='6' fill='#E7157B'/>
+<text x='360.0' y='231' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>LI</text>
+<text x='360.0' y='264' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Lambda Insights</text>
+<text x='360.0' y='280' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Lambda layer</text>
+<rect x='338.0' y='308' width='44' height='44' rx='6' fill='#E7157B'/>
+<text x='360.0' y='335' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>CTI</text>
+<text x='360.0' y='368' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Contributor Insights</text>
+<text x='360.0' y='384' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Top-N rules</text>
+<rect x='338.0' y='412' width='44' height='44' rx='6' fill='#E7157B'/>
+<text x='360.0' y='439' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>AI</text>
+<text x='360.0' y='472' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Application Insights</text>
+<text x='360.0' y='488' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Problem detection</text>
+<rect x='572.0' y='100' width='44' height='44' rx='6' fill='#7D8998'/>
+<text x='594.0' y='127' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>H</text>
+<text x='594.0' y='160' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Cluster health</text>
+<text x='594.0' y='176' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Pod CPU, memory</text>
+<rect x='572.0' y='204' width='44' height='44' rx='6' fill='#7D8998'/>
+<text x='594.0' y='231' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>F</text>
+<text x='594.0' y='264' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Function health</text>
+<text x='594.0' y='280' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Cold starts, RAM</text>
+<rect x='572.0' y='308' width='44' height='44' rx='6' fill='#7D8998'/>
+<text x='594.0' y='335' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>TOP</text>
+<text x='594.0' y='368' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Top contributors</text>
+<text x='594.0' y='384' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Top IPs, URLs</text>
+<rect x='572.0' y='412' width='44' height='44' rx='6' fill='#7D8998'/>
+<text x='594.0' y='439' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>D</text>
+<text x='594.0' y='472' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>App dashboards</text>
+<text x='594.0' y='488' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Root cause</text>
+<rect x='24' y='560' width='12' height='12' rx='2' fill='#ED7100'/>
+<text x='41' y='570' font-family='Helvetica, Arial, sans-serif' font-size='11.5' fill='#16191F'>Compute</text>
+<rect x='100.19999999999999' y='560' width='12' height='12' rx='2' fill='#E7157B'/>
+<text x='117.19999999999999' y='570' font-family='Helvetica, Arial, sans-serif' font-size='11.5' fill='#16191F'>Management / integration</text>
+<rect x='288.59999999999997' y='560' width='12' height='12' rx='2' fill='#7D8998'/>
+<text x='305.59999999999997' y='570' font-family='Helvetica, Arial, sans-serif' font-size='11.5' fill='#16191F'>Generic / actor</text>
+</svg>

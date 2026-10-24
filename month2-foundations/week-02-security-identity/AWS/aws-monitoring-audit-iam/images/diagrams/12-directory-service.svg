@@ -1,0 +1,56 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='720' height='486' viewBox='0 0 720 486'>
+<defs><marker id='ah' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M1,1 L9,5 L1,9 Z' fill='#545B64'/></marker></defs>
+<rect width='100%' height='100%' fill='#ffffff'/>
+<text x='24' y='34' font-family='Helvetica, Arial, sans-serif' font-size='16' font-weight='bold' fill='#232F3E'>Module 12: AWS Directory Service options</text>
+<rect x='32.0' y='58' width='188' height='354' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='126.0' y='80' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>On-premises</text>
+<rect x='266.0' y='58' width='188' height='354' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='360.0' y='80' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>AWS (your VPC)</text>
+<rect x='500.0' y='58' width='188' height='354' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='594.0' y='80' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>Used by</text>
+<path d='M156.0,122 L330.0,122' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<text x='243.0' y='115' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#16191F' paint-order='stroke' stroke='#ffffff' stroke-width='4'>trust</text>
+<path d='M330.0,226 L243.0,226 L243.0,122 L156.0,122' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<text x='199.5' y='115' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#16191F' paint-order='stroke' stroke='#ffffff' stroke-width='4'>proxy</text>
+<path d='M390.0,122 L564.0,122' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<path d='M390.0,122 L477.0,122 L477.0,226 L564.0,226' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<path d='M390.0,122 L477.0,122 L477.0,330 L564.0,330' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<rect x='104.0' y='100' width='44' height='44' rx='6' fill='#7D8998'/>
+<text x='126.0' y='127' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>AD</text>
+<text x='126.0' y='160' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>On-prem AD</text>
+<text x='126.0' y='176' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Domain controllers</text>
+<rect x='338.0' y='100' width='44' height='44' rx='6' fill='#DD344C'/>
+<text x='360.0' y='127' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>MAD</text>
+<text x='360.0' y='160' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Managed Microsoft AD</text>
+<text x='360.0' y='176' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Real AD, trust</text>
+<rect x='338.0' y='204' width='44' height='44' rx='6' fill='#DD344C'/>
+<text x='360.0' y='231' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>ADC</text>
+<text x='360.0' y='264' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>AD Connector</text>
+<text x='360.0' y='280' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Proxy, no cache</text>
+<rect x='338.0' y='308' width='44' height='44' rx='6' fill='#DD344C'/>
+<text x='360.0' y='335' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>SAD</text>
+<text x='360.0' y='368' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Simple AD</text>
+<text x='360.0' y='384' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Samba, standalone</text>
+<rect x='572.0' y='100' width='44' height='44' rx='6' fill='#ED7100'/>
+<text x='594.0' y='127' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>EC2</text>
+<text x='594.0' y='160' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>EC2 domain join</text>
+<text x='594.0' y='176' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Windows / Linux</text>
+<rect x='572.0' y='204' width='44' height='44' rx='6' fill='#C925D1'/>
+<text x='594.0' y='231' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>RDS</text>
+<text x='594.0' y='264' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>RDS SQL Server</text>
+<text x='594.0' y='280' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Windows auth</text>
+<rect x='572.0' y='308' width='44' height='44' rx='6' fill='#7AA116'/>
+<text x='594.0' y='335' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>FSX</text>
+<text x='594.0' y='368' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>FSx for Windows</text>
+<text x='594.0' y='384' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>SMB shares</text>
+<rect x='24' y='456' width='12' height='12' rx='2' fill='#ED7100'/>
+<text x='41' y='466' font-family='Helvetica, Arial, sans-serif' font-size='11.5' fill='#16191F'>Compute</text>
+<rect x='100.19999999999999' y='456' width='12' height='12' rx='2' fill='#7AA116'/>
+<text x='117.19999999999999' y='466' font-family='Helvetica, Arial, sans-serif' font-size='11.5' fill='#16191F'>Storage</text>
+<rect x='176.39999999999998' y='456' width='12' height='12' rx='2' fill='#C925D1'/>
+<text x='193.39999999999998' y='466' font-family='Helvetica, Arial, sans-serif' font-size='11.5' fill='#16191F'>Database</text>
+<rect x='259.2' y='456' width='12' height='12' rx='2' fill='#DD344C'/>
+<text x='276.2' y='466' font-family='Helvetica, Arial, sans-serif' font-size='11.5' fill='#16191F'>Security, identity</text>
+<rect x='408.0' y='456' width='12' height='12' rx='2' fill='#7D8998'/>
+<text x='425.0' y='466' font-family='Helvetica, Arial, sans-serif' font-size='11.5' fill='#16191F'>Generic / actor</text>
+</svg>

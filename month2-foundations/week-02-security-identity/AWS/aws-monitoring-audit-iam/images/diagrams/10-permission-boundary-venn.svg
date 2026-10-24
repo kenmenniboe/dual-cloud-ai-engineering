@@ -1,0 +1,17 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='720' height='460' viewBox='0 0 720 460'>
+<rect width='100%' height='100%' fill='#ffffff'/>
+<text x='24' y='34' font-family='Helvetica, Arial, sans-serif' font-size='16' font-weight='bold' fill='#232F3E'>Module 10: effective permissions are the overlap</text>
+<circle cx='300' cy='190' r='120' fill='#E7157B' fill-opacity='0.10' stroke='#E7157B' stroke-width='2'/>
+<circle cx='420' cy='190' r='120' fill='#DD344C' fill-opacity='0.10' stroke='#DD344C' stroke-width='2' stroke-dasharray='7 4'/>
+<circle cx='360' cy='285' r='120' fill='#7D8998' fill-opacity='0.12' stroke='#7D8998' stroke-width='2'/>
+<text x='242' y='150' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#232F3E'>SCP</text>
+<text x='242' y='168' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12' fill='#545B64'>Org maximum</text>
+<text x='478' y='136' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#232F3E'>Permission</text>
+<text x='478' y='153' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#232F3E'>boundary</text>
+<text x='478' y='170' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12' fill='#545B64'>Identity maximum</text>
+<text x='360' y='362' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#232F3E'>Identity policy</text>
+<text x='360' y='380' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12' fill='#545B64'>What you grant</text>
+<text x='360' y='226' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#232F3E'>Effective</text>
+<text x='360' y='243' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#232F3E'>permissions</text>
+<text x='360' y='440' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' fill='#16191F'>An explicit Deny in any policy always wins. SCPs and boundaries never grant.</text>
+</svg>

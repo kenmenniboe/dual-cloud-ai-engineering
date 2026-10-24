@@ -1,0 +1,45 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='720' height='464' viewBox='0 0 720 464'>
+<defs><marker id='ah' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M1,1 L9,5 L1,9 Z' fill='#545B64'/></marker></defs>
+<rect width='100%' height='100%' fill='#ffffff'/>
+<text x='24' y='34' font-family='Helvetica, Arial, sans-serif' font-size='16' font-weight='bold' fill='#232F3E'>Module 9: assume a role vs resource-based policy</text>
+<rect x='32.0' y='58' width='188' height='146' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='126.0' y='80' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>Account A</text>
+<rect x='266.0' y='58' width='188' height='146' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='360.0' y='80' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>Account B</text>
+<rect x='500.0' y='58' width='188' height='146' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='594.0' y='80' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>Account B</text>
+<rect x='149.0' y='244' width='188' height='146' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='243.0' y='266' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>Account A</text>
+<rect x='383.0' y='244' width='188' height='146' rx='10' fill='none' stroke='#879196' stroke-width='1.2' stroke-dasharray='6 4'/>
+<text x='477.0' y='266' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13.5' font-weight='bold' fill='#232F3E'>Account B</text>
+<path d='M156.0,122 L330.0,122' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<text x='243.0' y='115' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#16191F' paint-order='stroke' stroke='#ffffff' stroke-width='4'>assume role</text>
+<path d='M390.0,122 L564.0,122' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<text x='477.0' y='115' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#16191F' paint-order='stroke' stroke='#ffffff' stroke-width='4'>as role</text>
+<path d='M273.0,308 L447.0,308' fill='none' stroke='#545B64' stroke-width='1.5' marker-end='url(#ah)'/>
+<text x='360.0' y='301' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#16191F' paint-order='stroke' stroke='#ffffff' stroke-width='4'>direct</text>
+<rect x='104.0' y='100' width='44' height='44' rx='6' fill='#DD344C'/>
+<text x='126.0' y='127' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>USR</text>
+<text x='126.0' y='160' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>IAM user</text>
+<text x='126.0' y='176' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Gives up own perms</text>
+<rect x='338.0' y='100' width='44' height='44' rx='6' fill='#DD344C'/>
+<text x='360.0' y='127' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>ROLE</text>
+<text x='360.0' y='160' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>IAM role</text>
+<text x='360.0' y='176' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>sts:AssumeRole</text>
+<rect x='572.0' y='100' width='44' height='44' rx='6' fill='#7AA116'/>
+<text x='594.0' y='127' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>S3</text>
+<text x='594.0' y='160' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Amazon S3</text>
+<text x='594.0' y='176' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Role perms only</text>
+<rect x='221.0' y='286' width='44' height='44' rx='6' fill='#DD344C'/>
+<text x='243.0' y='313' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>USR</text>
+<text x='243.0' y='346' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Same IAM user</text>
+<text x='243.0' y='362' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Keeps own perms</text>
+<rect x='455.0' y='286' width='44' height='44' rx='6' fill='#7AA116'/>
+<text x='477.0' y='313' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#ffffff'>S3</text>
+<text x='477.0' y='346' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='12.5' font-weight='bold' fill='#232F3E'>Amazon S3</text>
+<text x='477.0' y='362' text-anchor='middle' font-family='Helvetica, Arial, sans-serif' font-size='11' fill='#545B64'>Bucket policy allows A</text>
+<rect x='24' y='434' width='12' height='12' rx='2' fill='#7AA116'/>
+<text x='41' y='444' font-family='Helvetica, Arial, sans-serif' font-size='11.5' fill='#16191F'>Storage</text>
+<rect x='100.19999999999999' y='434' width='12' height='12' rx='2' fill='#DD344C'/>
+<text x='117.19999999999999' y='444' font-family='Helvetica, Arial, sans-serif' font-size='11.5' fill='#16191F'>Security, identity</text>
+</svg>
