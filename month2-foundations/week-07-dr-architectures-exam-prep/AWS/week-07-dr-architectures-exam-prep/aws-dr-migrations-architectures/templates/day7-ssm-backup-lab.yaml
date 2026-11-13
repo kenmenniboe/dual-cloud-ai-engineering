@@ -1,0 +1,78 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Day 7 lab - SSM-managed EC2 with no inbound ports, tagged for AWS Backup
+
+Parameters:
+  LatestAmiId:
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64
+    Description: Latest Amazon Linux 2023 AMI (resolved from a public SSM parameter)
+  InstanceType:
+    Type: String
+    Default: t3.micro
+    AllowedValues:
+      - t3.micro
+      - t2.micro
+  EnvName:
+    Type: String
+    Default: day7-lab
+    Description: Prefix used in names and tags
+
+Resources:
+  SsmInstanceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ec2.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      Tags:
+        - Key: project
+          Value: !Ref EnvName
+
+  SsmInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Roles:
+        - !Ref SsmInstanceRole
+
+  NoInboundSG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: No inbound rules - access through Session Manager only
+      Tags:
+        - Key: Name
+          Value: !Sub '${EnvName}-no-inbound-sg'
+        - Key: project
+          Value: !Ref EnvName
+
+  LabInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !Ref LatestAmiId
+      InstanceType: !Ref InstanceType
+      IamInstanceProfile: !Ref SsmInstanceProfile
+      SecurityGroupIds:
+        - !GetAtt NoInboundSG.GroupId
+      Tags:
+        - Key: Name
+          Value: !Sub '${EnvName}-ssm-host'
+        - Key: backup
+          Value: daily
+        - Key: project
+          Value: !Ref EnvName
+
+Outputs:
+  InstanceId:
+    Description: EC2 instance to connect to with Session Manager
+    Value: !Ref LabInstance
+  SecurityGroupId:
+    Description: Security group with zero inbound rules
+    Value: !GetAtt NoInboundSG.GroupId
+  InstanceRoleName:
+    Description: IAM role attached to the instance
+    Value: !Ref SsmInstanceRole
