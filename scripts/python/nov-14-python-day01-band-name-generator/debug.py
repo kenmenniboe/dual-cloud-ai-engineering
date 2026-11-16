@@ -1,0 +1,5 @@
+print("Day 1 - Debugging")
+print("The farm's server crashed.")
+print("Check the logs")
+print("Restarting service...")
+print("Status: " + "back online")
