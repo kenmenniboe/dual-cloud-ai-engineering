@@ -53,4 +53,4 @@ By the end of this tutorial you will be able to:
 - [GitHub Actions CI/CD](https://docs.github.com/en/actions)
 - [Working with Remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes)
 
-[Git & GitHub Fundamentals](./Git%20&%20GitHub%20Fundamentals.pdf)
+[Git & GitHub Fundamentals](./images/git-github-fundamentals.pdf)
