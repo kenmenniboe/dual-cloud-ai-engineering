@@ -31,13 +31,13 @@ Policy name: `SonarDbPasswordReadAccess`
       "Sid": "ReadSonarDbPassword",
       "Effect": "Allow",
       "Action": "ssm:GetParameters",
-      "Resource": "arn:aws:ssm:us-east-1:860945038667:parameter/sonarqube/db/password"
+      "Resource": "arn:aws:ssm:us-east-1:123456789012:parameter/sonarqube/db/password"
     },
     {
       "Sid": "DecryptWithSsmKey",
       "Effect": "Allow",
       "Action": "kms:Decrypt",
-      "Resource": "arn:aws:kms:us-east-1:860945038667:key/*"
+      "Resource": "arn:aws:kms:us-east-1:123456789012:key/*"
     }
   ]
 }
@@ -48,7 +48,7 @@ ECS → Task Definitions → sonarqube-task → Create new revision
 
 Environment variables:
 ```
-SONAR_JDBC_PASSWORD  | valueFrom | arn:aws:ssm:us-east-1:860945038667:parameter/sonarqube/db/password
+SONAR_JDBC_PASSWORD  | valueFrom | arn:aws:ssm:us-east-1:123456789012:parameter/sonarqube/db/password
 SONAR_JDBC_URL        | value     | jdbc:postgresql://sonarqube-db.cq58k4e88cql.us-east-1.rds.amazonaws.com:5432/sonarqube
 SONAR_JDBC_USERNAME   | value     | sonarqube
 ```

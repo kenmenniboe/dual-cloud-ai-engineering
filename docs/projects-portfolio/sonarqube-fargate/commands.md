@@ -247,7 +247,7 @@ cat > /tmp/sonarqube-task-def.json << EOF
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "1024",
   "memory": "3072",
-  "executionRoleArn": "arn:aws:iam::860945038667:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::123456789012:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "name": "sonarqube",
