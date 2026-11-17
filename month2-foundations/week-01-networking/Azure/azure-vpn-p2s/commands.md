@@ -35,17 +35,17 @@ Get-ChildItem -Path Cert:\CurrentUser\My | Where-Object {$_.Subject -eq "CN=P2SC
 
 ```powershell
 # Initial export (leaf cert only)
-$pwd = ConvertTo-SecureString -String "P2SClient!23" -Force -AsPlainText
+$pwd = ConvertTo-SecureString -String "<PFX-PASSWORD>" -Force -AsPlainText
 Export-PfxCertificate -Cert "Cert:\CurrentUser\My\<thumbprint>" `
-  -FilePath "C:\Users\Kenneth M\Desktop\P2SChildCert.pfx" -Password $pwd
+  -FilePath "C:\Users\<username>\Desktop\P2SChildCert.pfx" -Password $pwd
 ```
 
 ```powershell
 # Re-export with full chain (fix for "client certificate must include an issuer" error)
 # Run AFTER importing the root cert into Trusted Root Certification Authorities
-$pwd = ConvertTo-SecureString -String "P2SClient!23" -Force -AsPlainText
+$pwd = ConvertTo-SecureString -String "<PFX-PASSWORD>" -Force -AsPlainText
 Export-PfxCertificate -Cert "Cert:\CurrentUser\My\<thumbprint>" `
-  -FilePath "C:\Users\Kenneth M\Desktop\P2SChildCert2.pfx" -Password $pwd -ChainOption BuildChain
+  -FilePath "C:\Users\<username>\Desktop\P2SChildCert2.pfx" -Password $pwd -ChainOption BuildChain
 ```
 
 ## Client Package Diagnostics
@@ -64,7 +64,7 @@ Get-ChildItem -Recurse | Select-Object FullName
 
 ```powershell
 # Pull the gateway's VPN server FQDN for manual client configuration
-Get-Content "C:\Users\Kenneth M\Desktop\vpnclientconfiguration\Generic\VpnSettings.xml" | Select-String "VpnServer"
+Get-Content "C:\Users\<username>\Desktop\vpnclientconfiguration\Generic\VpnSettings.xml" | Select-String "VpnServer"
 ```
 
 ## Windows Registry Fix — IKEv2 "remote server not responding"

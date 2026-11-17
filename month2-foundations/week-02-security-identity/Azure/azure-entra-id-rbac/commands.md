@@ -61,11 +61,11 @@ az role assignment list --all --include-inherited \
 ```bash
 # Create the three members (temporary passwords; users change them at first sign-in)
 az ad user create --display-name 'Ana Harvest' --user-principal-name "ana.harvest@$DOMAIN" \
-  --password 'TempPass-Ana-2026' --force-change-password-next-sign-in true
+  --password '<TEMP-PASSWORD>' --force-change-password-next-sign-in true
 az ad user create --display-name 'Joe Picker' --user-principal-name "joe.picker@$DOMAIN" \
-  --password 'TempPass-Joe-2026' --force-change-password-next-sign-in true
+  --password '<TEMP-PASSWORD>' --force-change-password-next-sign-in true
 az ad user create --display-name 'Mia Office' --user-principal-name "mia.office@$DOMAIN" \
-  --password 'TempPass-Mia-2026' --force-change-password-next-sign-in true
+  --password '<TEMP-PASSWORD>' --force-change-password-next-sign-in true
 
 # Set Properties-tab fields through Microsoft Graph
 az rest --method patch --url "https://graph.microsoft.com/v1.0/users/ana.harvest@$DOMAIN" \
